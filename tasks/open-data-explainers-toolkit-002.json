@@ -1,0 +1,33 @@
+{
+  "id": "open-data-explainers-toolkit-002",
+  "title": "Shared explainer toolkit (adapter interface, derivation pipeline, static tool scaffold, golden-fixture harness)",
+  "project": "open-data-explainers",
+  "type": "code",
+  "lane": "donated",
+  "priority": "high",
+  "domain": ["public-data", "civic", "education", "open-source"],
+  "riskTier": "low",
+  "urgent": false,
+  "deliverable": "pr",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "open-data-explainers turns verified open datasets into plain-language explainers and small static tools, decomposed into per-region/per-category tasks across seven modules (transit-access, collision-hotspots, college-outcomes, amenities, cpi, county-ag, astronomy). Because the project publishes derivatives, every figure must be reproducible and every module must share one contract so adding modules and regions is cheap and consistent. This task builds the shared toolkit all later tasks depend on.",
+  "objective": "Build the shared explainer toolkit: a source-adapter interface, a reproducible derivation pipeline, a static-first (no-backend, no-tracking) tool/template scaffold, and a golden-fixture test harness — implementing the fetch->derive->render contract with a committed methodology.json per explainer.",
+  "acceptanceCriteria": [
+    "Defines the shared explainer contract fetch(sourceSnapshot) -> derive(params) -> render(explainerArtifact), with a committed methodology.json per explainer.",
+    "Golden-fixture harness runs known-input -> known-output tests for derived metrics in CI; published figures regenerate within tolerance from committed code + source snapshot.",
+    "Static-first tool scaffold is client-side with no backend, no database, and no end-user tracking or PII; output is embeddable and accessible.",
+    "Content and data are separated so internationalisation is a cheap downstream task.",
+    "Code is MIT-licensed; pnpm build && pnpm test && pnpm lint pass; commit is DCO signed-off."
+  ],
+  "resources": [
+    "C:\\code\\elyos\\planning\\projects\\open-data-explainers\\PLAN.md",
+    "C:\\code\\elyos\\governance\\proposals\\open-data-explainers.md",
+    "C:\\code\\elyos\\packages\\schema\\src\\schemas.ts",
+    "GTFS specification; OpenStreetMap/ODbL; College Scorecard; BLS CPI; USDA NASS; STATS19; SDSS/Gaia; WCAG 2.2"
+  ],
+  "output": "A shared explainer toolkit (adapter interface + reproducible derivation pipeline + static tool scaffold + golden-fixture harness) committed to the project repo and ready for reuse by every per-region explainer task.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "MIT"
+}
