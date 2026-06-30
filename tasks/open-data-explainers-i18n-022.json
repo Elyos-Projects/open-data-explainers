@@ -1,0 +1,32 @@
+{
+  "id": "open-data-explainers-i18n-022",
+  "title": "Translate a delivered explainer (domain/language reviewer)",
+  "project": "open-data-explainers",
+  "type": "writing",
+  "lane": "donated",
+  "priority": "low",
+  "domain": ["translation", "education", "civic", "public-data"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "translation",
+  "tokenEstimate": "small",
+  "status": "open",
+  "context": "The shared toolkit separates content strings from data so internationalisation is a cheap downstream task. Once a delivered explainer is available in English, a language and domain reviewer can produce a translation that reaches non-English-speaking communities. The translation must not alter the underlying data derivation, must maintain the plain-language standard in the target language, and must carry the same 'not advice / non-partisan' framing.",
+  "objective": "Translate one specific previously-delivered explainer into a target language, reviewed by a domain-knowledgeable native-speaker reviewer, maintaining plain-language quality and the 'not advice' framing.",
+  "acceptanceCriteria": [
+    "One specific previously-delivered explainer is translated into a target language, using the content/data separation built into the shared toolkit (toolkit-002).",
+    "Translation reviewed by a domain-knowledgeable native speaker for accuracy, appropriate terminology, and plain-language quality in the target language.",
+    "Content/data separation maintained: only UI strings and explainer copy are translated; underlying data derivation and source snapshots are not altered.",
+    "Output licensed CC-BY-4.0; language/domain reviewer sign-off committed.",
+    "Accessibility pass (WCAG 2.2 AA, reading grade <= 8 in the target language) signed off."
+  ],
+  "resources": [
+    "PLAN.md — Solution approach (content/data separation for i18n)",
+    "TASKS.md — i18n-022 row",
+    "toolkit-002 (prerequisite — shared toolkit must exist and implement content/data separation)"
+  ],
+  "output": "A translated version of one delivered explainer (committed document in the target language + accessibility sign-off + language/domain reviewer sign-off).",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

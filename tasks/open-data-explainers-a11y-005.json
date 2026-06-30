@@ -1,0 +1,32 @@
+{
+  "id": "open-data-explainers-a11y-005",
+  "title": "Accessibility + plain-language standard (WCAG 2.2 AA, reading grade <= 8)",
+  "project": "open-data-explainers",
+  "type": "design-spec",
+  "lane": "donated",
+  "priority": "medium",
+  "domain": ["accessibility", "civic", "education", "public-data"],
+  "riskTier": "low",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "small",
+  "status": "open",
+  "context": "open-data-explainers targets the general public, teachers, journalists, and community groups — many of whom rely on assistive technologies or have lower reading levels. If an explainer fails accessibility, it excludes the very people it is meant to serve. Every explainer must meet WCAG 2.2 AA and a reading grade of 8 or below, and pass a sign-off checklist before publishing.",
+  "objective": "Define the accessibility + plain-language standard that every explainer must satisfy: WCAG 2.2 AA, target reading grade <= 8, keyboard/contrast/alt-text/colour-blind-safe palette requirements, and a reviewer sign-off checklist.",
+  "acceptanceCriteria": [
+    "Accessibility standard document specifies WCAG 2.2 AA compliance as the minimum bar for all published explainers, with concrete requirements for contrast ratios, keyboard navigation, and focus management.",
+    "Reading grade target of 8 or below (Flesch-Kincaid or equivalent) is specified with a recommended automated checking approach.",
+    "Requirements for alt-text on all non-decorative images, colour-blind-safe palettes, and accessible data tables are stated.",
+    "A sign-off checklist for the Accessibility reviewer to use when approving each explainer is included.",
+    "Output licensed CC-BY-4.0."
+  ],
+  "resources": [
+    "PLAN.md — Quality, review & risk gates section (Accessibility reviewer role)",
+    "WCAG 2.2 — https://www.w3.org/TR/WCAG22/",
+    "TASKS.md — a11y-005 row"
+  ],
+  "output": "A committed accessibility + plain-language standard document (e.g. ACCESSIBILITY.md or a11y-standard.md) with a sign-off checklist for the Accessibility reviewer, ready to be referenced by every downstream explainer task.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

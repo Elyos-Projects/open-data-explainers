@@ -1,0 +1,34 @@
+{
+  "id": "open-data-explainers-amenities-017",
+  "title": "Amenities-near-me derived POI set for >= 1 area (OSM, ODbL output)",
+  "project": "open-data-explainers",
+  "type": "data",
+  "lane": "donated",
+  "priority": "medium",
+  "domain": ["amenities", "civic", "public-data", "mapping"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "large",
+  "status": "open",
+  "context": "OpenStreetMap contains rich amenity data (parks, clinics, libraries, food shops, etc.) but it is inaccessible to most users in its raw form. Any derived database must be released under ODbL 1.0 with the required '© OpenStreetMap contributors' attribution. A harm scan is mandatory to ensure the explainer does not stigmatise areas as 'amenity deserts' or enable targeting of communities.",
+  "objective": "Build an amenities-near-me derived POI set for at least one area (OSM source, ODbL output) using osmkit-016 and the shared toolkit, passing gate-003 with correct ODbL attribution and a harm scan.",
+  "acceptanceCriteria": [
+    "Gate-003 PASS: output license = ODbL-1.0 for any derived database; '© OpenStreetMap contributors' attribution included in all output; produced map/visual licensed CC-BY-SA; share-alike not relicensed as permissive; license reviewer sign-off committed.",
+    "Derivation is reproducible from a pinned OSM extract date; harm scan (no 'amenity desert' stigmatisation, no community targeting) passed and committed.",
+    "Accessibility pass (WCAG 2.2 AA, reading grade <= 8) signed off.",
+    "License reviewer and Methodology+Stats reviewer sign-offs obtained.",
+    "Built using osmkit-016 and shared toolkit (toolkit-002)."
+  ],
+  "resources": [
+    "PLAN.md — Data, licensing & compliance (OpenStreetMap/ODbL row)",
+    "TASKS.md — amenities-017 acceptance criteria",
+    "OpenStreetMap — https://www.openstreetmap.org/",
+    "ODbL 1.0 — https://opendatacommons.org/licenses/odbl/1-0/",
+    "osmkit-016, gate-003, regionrubric-006, toolkit-002 (prerequisites)"
+  ],
+  "output": "An amenities-near-me derived POI set for at least one area (committed static tool + plain-language content + ODbL gate artifact + harm-scan record + accessibility sign-off).",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "ODbL-1.0"
+}

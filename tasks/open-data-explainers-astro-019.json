@@ -1,0 +1,34 @@
+{
+  "id": "open-data-explainers-astro-019",
+  "title": "Astronomy lesson from sky-survey data (SDSS/Gaia, educator-reviewed)",
+  "project": "open-data-explainers",
+  "type": "writing",
+  "lane": "donated",
+  "priority": "low",
+  "domain": ["astronomy", "education", "public-data", "science"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "SDSS and Gaia sky-survey data are publicly available but their release terms vary by data release — some may be non-commercial. A classroom astronomy lesson built from verified sky-survey data makes real scientific datasets accessible to educators and students. NC terms must be handled explicitly: carry the NC label or exclude the source, never launder NC data into a permissive output. An astronomer or educator domain reviewer is required.",
+  "objective": "Build a classroom astronomy lesson from sky-survey data (SDSS or Gaia, per-release license verified), with educator/astronomer domain review, passing gate-003 with NC handling, and accessible output.",
+  "acceptanceCriteria": [
+    "Gate-003 PASS: SDSS/Gaia release terms verified to permit educational reuse; NC terms handled (carry NC label or exclude source) — never laundered into a permissive output; required SDSS/Gaia acknowledgment text included.",
+    "Classroom lesson built from survey data includes accurate astronomy, a Methodology Card, and a Sources-&-limits panel with data vintage; an astronomer or educator domain reviewer signs off.",
+    "Accessibility pass (WCAG 2.2 AA, reading grade <= 8) signed off.",
+    "Output licensed CC-BY-4.0 (or NC-labelled if a release requires it); license reviewer sign-off obtained.",
+    "Lesson is ready for classroom use and clearly framed as education, not professional advice."
+  ],
+  "resources": [
+    "PLAN.md — Data, licensing & compliance (SDSS/Gaia row and NC handling)",
+    "PLAN.md — Open questions (SDSS/Gaia release terms)",
+    "TASKS.md — astro-019 acceptance criteria",
+    "SDSS — https://www.sdss.org/", "Gaia — https://www.cosmos.esa.int/web/gaia/data-release",
+    "toolkit-002, gate-003, methodcard-004 (prerequisites)"
+  ],
+  "output": "A classroom astronomy lesson (committed document + static visualisation + Methodology Card + gate artifact + astronomer/educator sign-off + accessibility sign-off).",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

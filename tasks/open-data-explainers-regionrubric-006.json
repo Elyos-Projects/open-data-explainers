@@ -1,0 +1,31 @@
+{
+  "id": "open-data-explainers-regionrubric-006",
+  "title": "Region-selection rubric + harm-scan checklist",
+  "project": "open-data-explainers",
+  "type": "design-spec",
+  "lane": "donated",
+  "priority": "medium",
+  "domain": ["governance", "civic", "public-data"],
+  "riskTier": "low",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "small",
+  "status": "open",
+  "context": "open-data-explainers fans into per-region tasks (one county, one metro, one area). Without a principled rubric, region selection can cherry-pick areas to tell a particular story, introduce geographic bias, or inadvertently stigmatise communities — especially for place-level modules like transit-access, amenities, and collision-hotspots. A region rubric and harm-scan checklist ensure regions are chosen by need and data coverage, not by the narrative they support.",
+  "objective": "Define the region-selection rubric (criteria for choosing regions for new explainer tasks) and the harm-scan checklist (for place-level explainers) to prevent cherry-picking bias and place-level stigmatisation.",
+  "acceptanceCriteria": [
+    "Region-selection rubric specifies criteria for choosing regions: data availability, community need or coverage, and a prohibition on cherry-picking areas to support a pre-determined story.",
+    "Harm-scan checklist covers at minimum: could this explainer stigmatise a neighbourhood or community, read as redlining-adjacent, enable targeting or profiling, or be mistaken for a recommendation/ranking of places?",
+    "Rubric and checklist are concise and actionable for a non-expert contributor pulling a task.",
+    "Output licensed CC-BY-4.0."
+  ],
+  "resources": [
+    "PLAN.md — Goals and non-goals section (region-selection rubric goal)",
+    "PLAN.md — Quality, review & risk gates section (harm scan gate)",
+    "TASKS.md — regionrubric-006 row"
+  ],
+  "output": "A committed region-selection rubric + harm-scan checklist document (e.g. REGION-RUBRIC.md), referenced by every per-region task as a prerequisite for region selection.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

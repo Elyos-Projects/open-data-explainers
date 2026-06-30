@@ -1,0 +1,31 @@
+{
+  "id": "open-data-explainers-outreach-007",
+  "title": "Beneficiary/distribution outreach + pilot acceptance-path",
+  "project": "open-data-explainers",
+  "type": "research",
+  "lane": "donated",
+  "priority": "high",
+  "domain": ["civic", "education", "public-data", "outreach"],
+  "riskTier": "low",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "small",
+  "status": "open",
+  "context": "open-data-explainers measures success as adoption by a named beneficiary, not as explainers produced. An explainer with no adopting partner counts as delivered-pending, not shipped. M0 requires a realistic acceptance path for the pilot before building begins: either a named informal channel (a teacher, extension office, newsroom, or portal who has agreed to evaluate the pilot) or a documented self-serve fallback (publish to the project site and pursue at least one external link or use). This outreach task opens the threads and documents the path.",
+  "objective": "Open at least one beneficiary outreach thread and document a pilot acceptance path — either a named informal channel or a documented self-serve fallback — before the M0 pilot (pilot-008) begins construction.",
+  "acceptanceCriteria": [
+    "At least 1 outreach thread opened with a named candidate beneficiary (school/OER network, local newsroom, civic group, extension office, or civic portal) for the county-ag pilot explainer.",
+    "A documented pilot acceptance path is committed: either (a) an informal channel with a named contact who has agreed to evaluate the pilot, or (b) a self-serve fallback plan specifying where the explainer will be published and how at least one external link or use will be pursued.",
+    "Outreach notes recorded in a committed document with channel, contact (anonymised where appropriate), and current response status.",
+    "At least one thread remains open and is tracked through to acceptance, delivered-pending determination, or confirmed self-serve+external-use."
+  ],
+  "resources": [
+    "PLAN.md — Problem & beneficiaries section (candidate channels)",
+    "PLAN.md — Roadmap M0 cold-start de-risking section",
+    "TASKS.md — outreach-007 row"
+  ],
+  "output": "A committed outreach-notes document (e.g. OUTREACH.md) recording at least one open thread, the named contact or self-serve fallback plan, and the current acceptance-path status.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

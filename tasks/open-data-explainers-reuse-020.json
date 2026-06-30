@@ -1,0 +1,32 @@
+{
+  "id": "open-data-explainers-reuse-020",
+  "title": "Track and verify external reuse/usage outcomes",
+  "project": "open-data-explainers",
+  "type": "research",
+  "lane": "donated",
+  "priority": "low",
+  "domain": ["governance", "civic", "public-data", "outcomes"],
+  "riskTier": "low",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "small",
+  "status": "open",
+  "context": "Elyos measures success as verifiable external adoption, not explainers produced. Reuse events must be externally verifiable — a partner-hosted URL, a teacher's written confirmation, a newsroom embed, or a citation. Self-reported use does not count. This task tracks and records reuse events to meet the M3 target of at least 3 verifiable events, and provides the Steward with a committed summary.",
+  "objective": "Track and verify at least 3 external reuse or usage events for delivered explainers, each with externally verifiable evidence, and record them in the outcomes ledger.",
+  "acceptanceCriteria": [
+    "At least 3 verifiable external reuse/usage events recorded: partner-hosted traffic, teacher reuse, newsroom embed, or citation — each with external evidence (no self-reported use).",
+    "Each event recorded in an outcomes/<explainer-id>.json artifact with: channel, URL or permalink, timestamp, data vintage, and applicable review sign-offs.",
+    "Evidence is externally verifiable (partner-hosted URL, written confirmation, merged embed, or published citation).",
+    "A reuse-tracking summary document is committed and accessible to the Steward and Maintainer."
+  ],
+  "resources": [
+    "PLAN.md — Success metrics (verifiable external reuse/usage events)",
+    "PLAN.md — Quality, review & risk gates (Definition of Shipped)",
+    "TASKS.md — reuse-020 row",
+    "partner-013 (prerequisite — at least one confirmed partner must exist)"
+  ],
+  "output": "A committed reuse-tracking summary document and at least 3 updated outcomes/<explainer-id>.json artifacts, each with externally verifiable evidence of reuse.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

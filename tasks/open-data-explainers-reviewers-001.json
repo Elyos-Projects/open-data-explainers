@@ -1,0 +1,30 @@
+{
+  "id": "open-data-explainers-reviewers-001",
+  "title": "Name/secure the License and Methodology+Stats reviewers (blocking gate roles)",
+  "project": "open-data-explainers",
+  "type": "research",
+  "lane": "donated",
+  "priority": "high",
+  "domain": ["governance", "civic", "open-data"],
+  "riskTier": "low",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "small",
+  "status": "open",
+  "context": "open-data-explainers has two non-skippable blocking gate roles: a License + provenance reviewer (who resolves output licenses and share-alike propagation per source) and a Methodology + statistics reviewer (who confirms every derived metric is statistically sound and reproducible). No explainer ships until both roles are named. The M0 pilot cannot be submitted for review until this task is done.",
+  "objective": "Identify and secure named individuals for the two blocking gate roles — License + provenance reviewer and Methodology + statistics reviewer — and commit a governance record of both roles.",
+  "acceptanceCriteria": [
+    "A named License + provenance reviewer is identified and willing to perform the license gate review for every delivered explainer.",
+    "A named Methodology + statistics reviewer is identified and willing to review all derived-metric modules (transit, collision, college, CPI).",
+    "Both roles are documented (name or handle, contact method, and scope) in a committed governance artifact (e.g. GOVERNANCE.md or reviewers.md).",
+    "No M0 pilot review proceeds until this task is marked done and the governance artifact is committed."
+  ],
+  "resources": [
+    "PLAN.md — Governance, roles & stakeholders section",
+    "TASKS.md — M0 milestone and gate-003 dependency"
+  ],
+  "output": "A committed governance artifact (e.g. GOVERNANCE.md or REVIEWERS.md) recording the named License reviewer and Methodology+Stats reviewer, their contact details, and their role scope.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

@@ -1,0 +1,32 @@
+{
+  "id": "open-data-explainers-refresh-021",
+  "title": "Staleness/refresh process + data-currency badges + drift detection",
+  "project": "open-data-explainers",
+  "type": "maintenance",
+  "lane": "donated",
+  "priority": "low",
+  "domain": ["governance", "public-data", "maintenance"],
+  "riskTier": "low",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "small",
+  "status": "open",
+  "context": "Open datasets are updated periodically. Without a staleness process, published explainers silently show outdated figures without readers knowing it — eroding trust and potentially misleading decisions. Each explainer must record its data vintage and refresh cadence; drift in an upstream release should automatically open a maintenance refresh task. The shared toolkit must surface a data-currency badge on every explainer artifact.",
+  "objective": "Define and document the staleness/refresh process, integrate data-currency badges into the shared toolkit, and specify a drift-detection approach that opens a refresh task when an upstream source updates.",
+  "acceptanceCriteria": [
+    "Each explainer records a data vintage (source retrieval date and version) and a refresh cadence; drift in an upstream release automatically opens a maintenance refresh task.",
+    "Re-running the committed derivation code regenerates published figures from the pinned source snapshot (reproducibility verified end-to-end).",
+    "A data-currency badge showing the data vintage is included in every delivered explainer artifact.",
+    "The staleness/refresh policy is committed as a document (e.g. REFRESH.md) and the drift-detection approach is integrated into or documented alongside the shared toolkit (toolkit-002).",
+    "Output licensed CC-BY-4.0."
+  ],
+  "resources": [
+    "PLAN.md — Sustainability & maintenance section (staleness/refresh)",
+    "TASKS.md — refresh-021 acceptance criteria and M3 exit criterion",
+    "toolkit-002 (prerequisite — shared toolkit must exist before drift detection can be integrated)"
+  ],
+  "output": "A committed staleness/refresh policy document (REFRESH.md or equivalent) + data-currency badge implementation + drift-detection approach integrated into or documented alongside the shared toolkit (toolkit-002).",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

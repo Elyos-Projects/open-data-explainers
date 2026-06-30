@@ -1,0 +1,33 @@
+{
+  "id": "open-data-explainers-pilot-008",
+  "title": "Pilot: one county-ag profile explainer end-to-end (USDA NASS)",
+  "project": "open-data-explainers",
+  "type": "data",
+  "lane": "donated",
+  "priority": "high",
+  "domain": ["agriculture", "public-data", "civic", "education"],
+  "riskTier": "low",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "The M0 pilot proves the per-region decomposition pattern end-to-end before scaling to harder modules. County-ag-profiles (USDA NASS Quick Stats) is chosen as the lowest-risk starting point: US government public domain data, no PII, place/institution-level only, low methodology risk. Completing this pilot validates the shared toolkit (toolkit-002), the license gate (gate-003), the Methodology Card (methodcard-004), and the accessibility standard (a11y-005) together, before any medium-risk module is attempted. An acceptance path must exist before building begins (outreach-007).",
+  "objective": "Build and deliver one county-ag profile explainer end-to-end — using the shared toolkit and passing all required gates — with confirmed adoption or a documented delivered-pending status and blocker identified.",
+  "acceptanceCriteria": [
+    "Module = county-ag-profiles for one county (USDA NASS Quick Stats: US-gov public domain, no PII); county chosen according to the region rubric (regionrubric-006).",
+    "Gate-003 PASS recorded as a committed artifact (PD source; output explainer text CC-BY-4.0; no PII present in output).",
+    "Plain-language profile + small static tool built using the shared toolkit (toolkit-002); Methodology Card (methodcard-004 schema) + Sources-&-limits panel + vintage badge present; figures reproduce in CI from committed code + USDA NASS snapshot.",
+    "Accessibility pass (WCAG 2.2 AA, reading grade <= 8) signed off by the Accessibility reviewer per the a11y-005 standard.",
+    "Adopted via an informal channel (a teacher/extension office/portal agrees to use/host it) or via self-serve+external-use with the Steward's outcomes/<explainer-id>.json recorded, OR explicitly marked delivered-pending with the adoption blocker surfaced."
+  ],
+  "resources": [
+    "PLAN.md — Roadmap M0 pilot section",
+    "TASKS.md — pilot-008 acceptance criteria",
+    "USDA NASS Quick Stats — https://quickstats.nass.usda.gov/",
+    "toolkit-002, gate-003, methodcard-004, a11y-005, regionrubric-006, outreach-007, reviewers-001 (all prerequisites)"
+  ],
+  "output": "A complete county-ag profile explainer for one county: committed static tool + plain-language content + Methodology Card + gate artifact (PASS) + accessibility sign-off + outcomes record (adopted) or delivered-pending note with blocker.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

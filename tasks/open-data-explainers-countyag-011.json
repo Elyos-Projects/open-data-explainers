@@ -1,0 +1,33 @@
+{
+  "id": "open-data-explainers-countyag-011",
+  "title": "County-ag profiles batch (N counties via the pilot template)",
+  "project": "open-data-explainers",
+  "type": "data",
+  "lane": "donated",
+  "priority": "medium",
+  "domain": ["agriculture", "public-data", "civic", "education"],
+  "riskTier": "low",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "large",
+  "status": "open",
+  "context": "After the M0 pilot (pilot-008) proves the county-ag end-to-end pattern for one county, this task applies the same template to a batch of N counties. The shared toolkit, gate checklist, and Methodology Card schema make each additional county cheap and consistent to produce. County selection follows the region rubric (regionrubric-006) to avoid cherry-picking.",
+  "objective": "Build county-ag profile explainers for a batch of N counties (USDA NASS Quick Stats) using the pilot-008 template and shared toolkit, passing gate-003 and accessibility for each county in the batch.",
+  "acceptanceCriteria": [
+    "Each county profile uses the pilot-008 template and shared toolkit (toolkit-002); gate-003 PASS recorded per county (PD source; output CC-BY-4.0; no PII).",
+    "Figures for each county reproduce in CI from committed code + USDA NASS source snapshot; counties chosen per the region rubric (regionrubric-006).",
+    "Accessibility pass (WCAG 2.2 AA, reading grade <= 8) signed off for each explainer in the batch.",
+    "License reviewer and Methodology+Stats reviewer sign-offs obtained for the batch as a whole.",
+    "At least 3 county explainers delivered in the batch, each with an outcomes record or a delivered-pending note identifying the adoption blocker."
+  ],
+  "resources": [
+    "PLAN.md — Roadmap M1 section (county-ag batch)",
+    "TASKS.md — countyag-011 row",
+    "USDA NASS Quick Stats — https://quickstats.nass.usda.gov/",
+    "pilot-008, toolkit-002, gate-003, regionrubric-006 (prerequisites)"
+  ],
+  "output": "A batch of at least 3 county-ag profile explainers (committed static tools + plain-language content + Methodology Cards + gate artifacts + accessibility sign-offs + outcomes records or delivered-pending notes).",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

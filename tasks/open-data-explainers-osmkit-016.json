@@ -1,0 +1,33 @@
+{
+  "id": "open-data-explainers-osmkit-016",
+  "title": "OSM ODbL share-alike output kit (derived-DB vs produced-work, attribution)",
+  "project": "open-data-explainers",
+  "type": "code",
+  "lane": "donated",
+  "priority": "medium",
+  "domain": ["licensing", "public-data", "civic", "open-source"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "pr",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "Any explainer derived from OpenStreetMap data must carry the ODbL 1.0 share-alike license on derived databases and the mandatory '© OpenStreetMap contributors' attribution string. The distinction between a derived database (ODbL) and a produced work (map/visual, CC-BY-SA) is critical and easily mishandled. A reusable kit that enforces this prevents share-alike violations across all OSM-derived modules (amenities-017 and any future OSM task).",
+  "objective": "Build a reusable OSM ODbL share-alike output kit: code and templates that correctly handle the derived-database vs. produced-work distinction, embed the required attribution, and propagate share-alike — never relicensing an ODbL derivative as permissive.",
+  "acceptanceCriteria": [
+    "Kit codifies the ODbL derived-database vs. produced-work distinction: derived databases output as ODbL-1.0; produced maps and visuals output as CC-BY-SA; toolkit code as MIT.",
+    "Required '© OpenStreetMap contributors' attribution string is automatically embedded in all OSM-derived output.",
+    "Share-alike propagation is enforced: no ODbL-derived database is relicensed as permissive.",
+    "Code is MIT-licensed; pnpm build && pnpm test && pnpm lint pass; commit is DCO signed-off.",
+    "License reviewer verifies the kit's attribution and share-alike handling before merge."
+  ],
+  "resources": [
+    "PLAN.md — Data, licensing & compliance (OpenStreetMap/ODbL row)",
+    "Open Database License (ODbL) 1.0 — https://opendatacommons.org/licenses/odbl/1-0/",
+    "OSM attribution guidelines — https://www.openstreetmap.org/copyright",
+    "toolkit-002, gate-003 (prerequisites)"
+  ],
+  "output": "An ODbL share-alike output kit (code + templates + license handling logic) committed to the project repo as a PR, ready for reuse by amenities-017 and any future OSM-derived task.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "MIT"
+}

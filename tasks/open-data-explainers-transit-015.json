@@ -1,0 +1,33 @@
+{
+  "id": "open-data-explainers-transit-015",
+  "title": "Transit-access explainer for >= 1 metro (GTFS, per-feed license verified)",
+  "project": "open-data-explainers",
+  "type": "data",
+  "lane": "donated",
+  "priority": "medium",
+  "domain": ["transit", "civic", "public-data", "accessibility"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "large",
+  "status": "open",
+  "context": "There is no blanket GTFS license; each agency feed has its own terms. A transit-access explainer must be built only from feeds whose license individually permits the derivative, with per-feed attribution and resolved output license recorded. The access score must follow the locked transit-method-014 definition exactly, with a harm scan to ensure no 'good/bad place' judgement is implied about any neighbourhood or community.",
+  "objective": "Build a transit-access explainer for at least one metro using GTFS data, with each feed individually license-gated per gate-003, and the access score following the locked transit-method-014 definition.",
+  "acceptanceCriteria": [
+    "Each GTFS feed used is license-gated individually (gate-003): only feeds whose license permits the derivative are used; restrictive/no-derivative/unclear feeds excluded; per-feed attribution and resolved output license recorded in the committed gate artifact.",
+    "Access score follows the locked transit-method-014 definition exactly; Methodology Card documents walk threshold, network vs. straight-line, and frequency weighting; no 'good/bad place' judgement (harm scan passed).",
+    "Figures reproduce in CI from committed code + GTFS snapshot; built on the shared toolkit (toolkit-002).",
+    "Accessibility pass (WCAG 2.2 AA, reading grade <= 8) and Domain (transport) reviewer sign-off obtained.",
+    "License reviewer and Methodology+Stats reviewer sign-offs obtained."
+  ],
+  "resources": [
+    "PLAN.md — Data, licensing & compliance (GTFS feeds row)",
+    "TASKS.md — transit-015 acceptance criteria",
+    "GTFS specification — https://gtfs.org/",
+    "transit-method-014, toolkit-002, gate-003 (prerequisites)"
+  ],
+  "output": "A transit-access explainer for at least one metro (committed static tool + plain-language content + Methodology Card + per-feed gate artifacts + accessibility sign-off + harm-scan record).",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

@@ -1,0 +1,33 @@
+{
+  "id": "open-data-explainers-collision-trends-025",
+  "title": "Multi-year collision trend explainers (aggregate)",
+  "project": "open-data-explainers",
+  "type": "data",
+  "lane": "donated",
+  "priority": "low",
+  "domain": ["road-safety", "public-data", "civic", "statistics"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "The collision-018 task delivers a single-period hotspot view. Multi-year trend analysis of STATS19 data can help journalists and community groups understand whether road safety is changing in an area — but requires the same aggregate-only / k>=5 / no-causation guardrails applied across multiple annual extracts. No year-on-year bin with fewer than k=5 events may appear in output, and no trend may be labelled as a causal improvement or worsening.",
+  "objective": "Build multi-year collision trend explainers for at least one area (STATS19 data, aggregate-only, k>=5 minimum cell count across all years), extending the collision-018 module.",
+  "acceptanceCriteria": [
+    "Gate-003 PASS: STATS19 OGL v3; output CC-BY-4.0 with OGL attribution; aggregate-only; k >= 5 minimum cell count per geo/temporal bin across all years; no person-level rows; no re-identification.",
+    "Methodology Card: multi-year trend methodology documented; appropriate denominators and exposure metrics used; noise and confidence limits acknowledged; no causation, no 'road getting better/worse' causal labelling.",
+    "Harm scan passed (no blame/stigma/community targeting); Domain (road-safety) + Methodology+Stats reviewer sign-offs obtained.",
+    "Figures reproduce in CI from committed code + STATS19 multi-year snapshots; built on the shared toolkit (toolkit-002) and the collision-018 module.",
+    "License reviewer and Accessibility reviewer sign-offs obtained."
+  ],
+  "resources": [
+    "PLAN.md — Data, licensing & compliance (STATS19/OGL row)",
+    "TASKS.md — collision-trends-025 row",
+    "STATS19 data — https://www.data.gov.uk/dataset/cb7ae6f0-4be6-4935-9277-47e5ce24a11f/road-safety-data",
+    "collision-018, toolkit-002, gate-003 (prerequisites)"
+  ],
+  "output": "Multi-year collision trend explainers for at least one area (committed static tool + plain-language content + Methodology Card + gate artifact + harm-scan record + accessibility sign-off).",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}
