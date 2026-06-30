@@ -1,0 +1,33 @@
+{
+  "id": "open-data-explainers-college-010",
+  "title": "College-outcomes-explorer (College Scorecard) — not a ranking, not advice",
+  "project": "open-data-explainers",
+  "type": "data",
+  "lane": "donated",
+  "priority": "medium",
+  "domain": ["education", "public-data", "civic"],
+  "riskTier": "low",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "The US Department of Education College Scorecard publishes institution-level outcome data (graduation rates, typical earnings, net cost) in a format inaccessible to most families and school counsellors. An explorer that presents affordability and outcomes without a single composite ranking or causal claim helps students and families explore options — but must explicitly state it is information, not advice, and must not imply that earnings are caused by the institution attended.",
+  "objective": "Build a college-outcomes-explorer (College Scorecard, US Dept. of Education) — institution-level only, no person-level data, no composite ranking, no causal claims, explicitly not advice — passing all required gates.",
+  "acceptanceCriteria": [
+    "Gate-003 PASS: College Scorecard = US government public domain; output CC-BY-4.0; institution-level data only, no person-level data; committed gate artifact.",
+    "Presents affordability and outcomes without a single composite 'best' ranking and without causal claims (earnings are not caused by the institution attended); explicit 'not advice' + data limits displayed prominently.",
+    "Methodology Card states the data dictionary version, transforms, vintage, and an explicit 'does NOT claim' list (no ranking-as-advice, no causation).",
+    "Methodology+Stats reviewer and Domain (college-access practitioner) sign-offs obtained; accessibility pass (WCAG 2.2 AA, reading grade <= 8) signed off.",
+    "Figures reproduce in CI from committed code + College Scorecard snapshot; built on the shared toolkit (toolkit-002)."
+  ],
+  "resources": [
+    "PLAN.md — Data, licensing & compliance (College Scorecard row)",
+    "TASKS.md — college-010 acceptance criteria",
+    "College Scorecard — https://collegescorecard.ed.gov/data/",
+    "toolkit-002, gate-003, methodcard-004 (prerequisites)"
+  ],
+  "output": "A college-outcomes-explorer (committed static tool + plain-language content + Methodology Card + gate artifact + accessibility sign-off).",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

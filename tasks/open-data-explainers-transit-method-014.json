@@ -1,0 +1,33 @@
+{
+  "id": "open-data-explainers-transit-method-014",
+  "title": "Transit-access score definition + methodology (walk threshold, network, frequency)",
+  "project": "open-data-explainers",
+  "type": "design-spec",
+  "lane": "donated",
+  "priority": "medium",
+  "domain": ["transit", "methodology", "civic", "public-data"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "small",
+  "status": "open",
+  "context": "A transit-access explainer must be built on a locked, peer-reviewed definition of what 'transit access' means. Without a precise methodology committed before any metro explainer is built, the score can be gamed, compared incorrectly across metros, or misread as a 'good/bad place' judgement. The methodology must define the walk-distance threshold, network vs. straight-line measurement, and frequency weighting — and explicitly state what the score does NOT claim.",
+  "objective": "Define and lock the transit-access score methodology (walk threshold, network vs. straight-line, frequency weighting, and explicit non-claims), reviewed and signed off by the Methodology+Stats and Domain (transport) reviewers before any metro explainer begins.",
+  "acceptanceCriteria": [
+    "A committed methodology document defines: (a) the walk-distance threshold in metres or minutes, (b) whether the score uses network routing or straight-line distance to stops, (c) the frequency weighting approach (e.g. peak departures per hour), and (d) an explicit list of what the score does NOT claim (no 'good/bad place' judgement, no causal claims).",
+    "Methodology Card schema (methodcard-004) completed for the transit-access module.",
+    "Methodology+Stats reviewer and Domain (transport) reviewer sign-offs obtained and committed.",
+    "No metro explainer (transit-015 or any per-region fan-out) may proceed until this task is done.",
+    "Output licensed CC-BY-4.0."
+  ],
+  "resources": [
+    "PLAN.md — Open questions section (transit-access score definition)",
+    "PLAN.md — Quality, review & risk gates section (Methodology+Stats gate)",
+    "TASKS.md — transit-method-014 row",
+    "methodcard-004 (prerequisite)"
+  ],
+  "output": "A committed transit-access score methodology document (transit-methodology.md + Methodology Card JSON), locked with Methodology+Stats and Domain reviewer sign-offs, blocking any metro explainer until done.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

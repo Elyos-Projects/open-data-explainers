@@ -1,0 +1,33 @@
+{
+  "id": "open-data-explainers-cpi-009",
+  "title": "CPI inflation-by-category explainer (national, BLS)",
+  "project": "open-data-explainers",
+  "type": "data",
+  "lane": "donated",
+  "priority": "medium",
+  "domain": ["economics", "public-data", "civic", "education"],
+  "riskTier": "low",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "Bureau of Labor Statistics CPI data is public domain, but the raw series tables are opaque to most readers. A plain-language explainer showing how inflation varies by spending category (food, shelter, energy, medical, etc.) helps consumers, journalists, and educators understand purchasing power changes — provided it carries an explicit 'not financial advice' notice and a correct base/reference period, and that the Methodology Card records the BLS series and limits.",
+  "objective": "Build a CPI inflation-by-category explainer at the national level (BLS data), passing gate-003 and the methodology gate, with reproducible figures and a 'not financial advice' framing.",
+  "acceptanceCriteria": [
+    "Gate-003 PASS: BLS = US government public domain; output text CC-BY-4.0; no PII; committed gate artifact.",
+    "Plain-language inflation-by-category explainer shows correct base/reference period and category breakdowns with explicit 'not financial advice' notice; Methodology Card records the BLS series, base period, transforms, and known limits.",
+    "Figures reproduce from committed code + BLS source snapshot in CI; built on the shared toolkit (toolkit-002).",
+    "Accessibility pass (WCAG 2.2 AA, reading grade <= 8) signed off.",
+    "License reviewer and Methodology+Stats reviewer sign-offs obtained."
+  ],
+  "resources": [
+    "PLAN.md — Data, licensing & compliance (BLS CPI row)",
+    "TASKS.md — cpi-009 acceptance criteria",
+    "BLS CPI — https://www.bls.gov/cpi/",
+    "toolkit-002, gate-003, methodcard-004 (prerequisites)"
+  ],
+  "output": "A CPI inflation-by-category explainer (committed static tool + plain-language content + Methodology Card + gate artifact + accessibility sign-off).",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

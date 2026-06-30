@@ -1,0 +1,34 @@
+{
+  "id": "open-data-explainers-collision-018",
+  "title": "Collision-hotspots explainer for >= 1 area (STATS19, aggregate-only)",
+  "project": "open-data-explainers",
+  "type": "data",
+  "lane": "donated",
+  "priority": "medium",
+  "domain": ["road-safety", "public-data", "civic", "statistics"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "large",
+  "status": "open",
+  "context": "STATS19 (UK DfT) contains casualty-level road collision records (age band, sex, severity, location). Aggregate hotspot views can help journalists and community groups understand road safety — but person-level rows must never appear in output, geographic/temporal bins with fewer than k=5 events must not be shown (re-identification risk), and no bin or road may be labelled as 'dangerous' (causation/harm risk). A mandatory harm scan and domain review are required.",
+  "objective": "Build a collision-hotspots explainer for at least one area (STATS19 data, aggregate-only, k>=5 minimum cell count) passing gate-003, the methodology gate, the PII/aggregation gate, and a harm scan.",
+  "acceptanceCriteria": [
+    "Gate-003 PASS: STATS19 OGL v3; output text CC-BY-4.0 with OGL attribution ('Contains public sector information licensed under the Open Government Licence v3.0'); aggregate-only output; k >= 5 minimum cell count per geo/temporal bin; geo-precision limit applied; no person-level rows in any output; no re-identification possible.",
+    "Methodology Card: appropriate denominators and exposure metrics used where relevant; noise acknowledged; no causation and no 'dangerous road' labelling; explicit 'not advice / non-partisan' notice.",
+    "Harm scan passed (no blame/stigma/community targeting); Domain (road-safety) + Methodology+Stats + Accessibility reviewer sign-offs obtained.",
+    "Figures reproduce in CI from committed code + STATS19 snapshot; built on the shared toolkit (toolkit-002).",
+    "License reviewer sign-off obtained."
+  ],
+  "resources": [
+    "PLAN.md — Data, licensing & compliance (STATS19/OGL row and Privacy/PII stance)",
+    "TASKS.md — collision-018 acceptance criteria",
+    "STATS19 data — https://www.data.gov.uk/dataset/cb7ae6f0-4be6-4935-9277-47e5ce24a11f/road-safety-data",
+    "Open Government Licence v3.0 — https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
+    "toolkit-002, gate-003, regionrubric-006 (prerequisites)"
+  ],
+  "output": "A collision-hotspots explainer for at least one area (committed static tool + plain-language content + Methodology Card + gate artifact + harm-scan record + accessibility sign-off).",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

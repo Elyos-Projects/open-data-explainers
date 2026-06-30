@@ -1,0 +1,32 @@
+{
+  "id": "open-data-explainers-gate-003",
+  "title": "License + provenance + output-license + PII/aggregation gate checklist",
+  "project": "open-data-explainers",
+  "type": "design-spec",
+  "lane": "donated",
+  "priority": "high",
+  "domain": ["licensing", "governance", "public-data", "civic"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "small",
+  "status": "open",
+  "context": "open-data-explainers publishes derivatives — aggregations, summaries, and tools built from open datasets. This means the output license is not automatically the same as the input license. Share-alike sources (ODbL/OSM, some GTFS feeds) propagate their terms to derived databases; GTFS feed licenses vary per agency; SDSS/Gaia releases may be non-commercial. A committed, reviewable gate checklist is the hard gate that every module must pass before publishing, ensuring no share-alike violation, no person-level PII output, and correct attribution.",
+  "objective": "Define and document the license + provenance + output-license + PII/aggregation gate checklist that every explainer module must pass before publishing, including share-alike propagation rules, per-feed GTFS gating, SDSS/Gaia NC handling, and aggregate-only PII rules.",
+  "acceptanceCriteria": [
+    "Records per source: license id + URL + committed text snapshot (copy + SHA-256 + Wayback), permitsDerivative:true with cited clause, and the resolved output license of our derivative. Missing/unparseable evidence = FLAG/EXCLUDE; never default-allow.",
+    "Encodes share-alike propagation (ODbL derived databases must be released ODbL; OSM attribution required) and per-feed GTFS gating (exclude restrictive/no-derivative/unclear feeds) and SDSS/Gaia NC handling (carry NC label or exclude; never launder NC into permissive output).",
+    "PII/aggregation rule: only aggregate or already-de-identified data; for person-derived sources (STATS19) require aggregate-only output, a minimum cell count k >= 5 per geo/temporal bin, and a geo-precision limit; never person-level output; never de-anonymise.",
+    "Produces a committed, reviewable PASS/FLAG/EXCLUDE artifact per source/region that the License reviewer signs off.",
+    "Reviewed and approved by the named License reviewer (reviewers-001) before the M0 pilot submits for review."
+  ],
+  "resources": [
+    "PLAN.md — Data, licensing & compliance section (per-source output-license matrix)",
+    "PLAN.md — Quality, review & risk gates section",
+    "TASKS.md — gate-003 acceptance criteria"
+  ],
+  "output": "A committed gate checklist document and machine-readable schema (e.g. gate-checklist.md + gate-schema.json) defining the PASS/FLAG/EXCLUDE criteria per source, ready to be applied as a non-skippable gate for every explainer module.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

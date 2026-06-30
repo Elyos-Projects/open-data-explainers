@@ -1,0 +1,32 @@
+{
+  "id": "open-data-explainers-dash-024",
+  "title": "Outcome/usage dashboard (privacy-preserving, aggregate)",
+  "project": "open-data-explainers",
+  "type": "code",
+  "lane": "donated",
+  "priority": "low",
+  "domain": ["governance", "civic", "public-data", "outcomes"],
+  "riskTier": "low",
+  "urgent": false,
+  "deliverable": "pr",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "The outcomes ledger records adoption and reuse events per explainer (outcomes/<explainer-id>.json). A privacy-preserving, aggregate dashboard over this ledger lets the Steward and community track adoption progress at a glance. No end-user PII may be collected or displayed; only aggregate recorded adoption events from the committed ledger are shown. Static, client-side, no tracking services.",
+  "objective": "Build a privacy-preserving, aggregate outcome/usage dashboard that reads the committed outcomes ledger and displays adoption progress without collecting or displaying any end-user PII.",
+  "acceptanceCriteria": [
+    "Dashboard reads the outcomes ledger (outcomes/<explainer-id>.json files committed to the repo); no end-user PII collected or displayed.",
+    "Privacy-preserving by design: aggregate counts only; no cookies, no user identifiers, no personal data, no tracking services.",
+    "Static, client-side tool: no backend, no database, no runtime server.",
+    "Code is MIT-licensed; pnpm build && pnpm test && pnpm lint pass; commit is DCO signed-off.",
+    "Dashboard committed to the project repo as a PR and linked from the project README."
+  ],
+  "resources": [
+    "PLAN.md — Security & privacy section (privacy-preserving usage measurement)",
+    "TASKS.md — dash-024 row",
+    "toolkit-002 (prerequisite — shared toolkit must exist for the static scaffold)"
+  ],
+  "output": "A committed outcome/usage dashboard (static, client-side code + build config) submitted as a PR, reading the outcomes ledger and linked from the README.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "MIT"
+}

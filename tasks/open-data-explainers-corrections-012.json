@@ -1,0 +1,31 @@
+{
+  "id": "open-data-explainers-corrections-012",
+  "title": "Public corrections process + changelog convention",
+  "project": "open-data-explainers",
+  "type": "design-spec",
+  "lane": "donated",
+  "priority": "low",
+  "domain": ["governance", "public-data", "civic"],
+  "riskTier": "low",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "small",
+  "status": "open",
+  "context": "When a reader notices an error in a published explainer — a wrong figure, stale data, or misleading framing — there must be a defined, public process for reporting, triaging, fixing, and logging the correction. Without this, corrections happen ad hoc or not at all, eroding trust. The process must also specify a changelog convention so each explainer records its correction history.",
+  "objective": "Define and document the public corrections process and changelog convention for open-data-explainers, and commit the process so it is linked from the project README.",
+  "acceptanceCriteria": [
+    "A corrections process document specifies how a reader reports an error (e.g. a GitHub issue template or dedicated email), how it is triaged, who is responsible for fixing it, and the expected response time.",
+    "A changelog convention is defined for recording corrections on each explainer (e.g. a CORRECTIONS.md or a per-explainer changelog section with date, description, and severity).",
+    "The corrections process document is committed to the repo and linked from the project README.",
+    "Output licensed CC-BY-4.0."
+  ],
+  "resources": [
+    "PLAN.md — Sustainability & maintenance section (corrections process)",
+    "TASKS.md — corrections-012 row",
+    "toolkit-002 (prerequisite — shared toolkit must exist before corrections can reference it)"
+  ],
+  "output": "A committed corrections process document + changelog convention (e.g. CORRECTIONS.md or a CONTRIBUTING.md update), linked from the project README.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

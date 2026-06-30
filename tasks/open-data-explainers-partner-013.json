@@ -1,0 +1,32 @@
+{
+  "id": "open-data-explainers-partner-013",
+  "title": "Secure first confirmed distribution partner",
+  "project": "open-data-explainers",
+  "type": "research",
+  "lane": "donated",
+  "priority": "high",
+  "domain": ["civic", "education", "outreach", "governance"],
+  "riskTier": "low",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "small",
+  "status": "open",
+  "context": "Elyos measures success as adoption by a named beneficiary. Until a named partner confirms they will host or use a specific explainer, all tasks carry verifiedNeed:false and requestor:'TO BE SECURED'. This task closes that gap by converting an outreach thread (outreach-007) into a first confirmed partner: a named school, OER network, newsroom, civic group, or portal with a specific explainer in scope.",
+  "objective": "Secure the first confirmed distribution partner — a named beneficiary who commits to hosting or using a specific explainer — and update affected tasks with verifiedNeed:true and a named requestor.",
+  "acceptanceCriteria": [
+    "A named beneficiary (school/OER network, newsroom, civic group, or civic portal) has confirmed in writing or on record that they will host or use a specific explainer.",
+    "The channel and acceptance evidence are documented (e.g. email confirmation, written agreement, or acceptance into an OER collection).",
+    "Affected task JSON files are updated with verifiedNeed:true and requestor set to the named beneficiary.",
+    "Steward records the acceptance evidence in an outcomes/<explainer-id>.json artifact with channel, URL/permalink (if applicable), and timestamp."
+  ],
+  "resources": [
+    "PLAN.md — Problem & beneficiaries section (candidate partners)",
+    "PLAN.md — Governance, roles & stakeholders (Steward role)",
+    "TASKS.md — partner-013 acceptance criteria",
+    "outreach-007 (prerequisite — outreach threads must be open before a partner can be confirmed)"
+  ],
+  "output": "A committed partner-confirmation record (e.g. PARTNERS.md or an outcomes/<explainer-id>.json artifact) documenting the named partner, their channel, the specific explainer they have accepted, and the acceptance evidence.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

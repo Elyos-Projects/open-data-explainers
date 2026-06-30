@@ -1,0 +1,33 @@
+{
+  "id": "open-data-explainers-gtfs-catalog-023",
+  "title": "GTFS multi-feed license catalog + scaling",
+  "project": "open-data-explainers",
+  "type": "research",
+  "lane": "donated",
+  "priority": "low",
+  "domain": ["transit", "licensing", "public-data", "civic"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "Scaling transit-access explainers to multiple metros requires knowing which GTFS feeds permit derivatives. There is no blanket GTFS license; each transit agency has its own terms. Repeating full individual license research for every new metro is expensive. A multi-feed license catalog systematically triages feeds so contributors can quickly identify viable metros and reuse prior research — while maintaining the gate-003 standard.",
+  "objective": "Research and catalog the license terms of at least 10 GTFS agency feeds, triaging each as PASS/FLAG/EXCLUDE for use in transit-access explainers, and provide a reusable scaling pattern for future metros.",
+  "acceptanceCriteria": [
+    "At least 10 GTFS agency feeds researched and triaged: license id + URL + permitted-derivative determination (PASS/FLAG/EXCLUDE) + required attribution string recorded for each.",
+    "Per-feed triage follows gate-003 criteria: restrictive/no-derivative/unclear feeds marked EXCLUDE; share-alike feeds noted with output license implications; clear PD/CC-BY feeds marked PASS.",
+    "Catalog committed as a reviewable, reusable document (e.g. gtfs-license-catalog.md or structured JSON).",
+    "License reviewer sign-off on the catalog approach and at least one sample triage decision.",
+    "Catalog provides a documented scaling pattern for adding more metro feeds to future transit explainers."
+  ],
+  "resources": [
+    "PLAN.md — Data, licensing & compliance (GTFS feeds row)",
+    "TASKS.md — gtfs-catalog-023 row",
+    "GTFS specification — https://gtfs.org/",
+    "transit-method-014, gate-003 (prerequisites)"
+  ],
+  "output": "A committed GTFS multi-feed license catalog (gtfs-license-catalog.md or JSON) with at least 10 agency feeds triaged and a documented scaling pattern for future metro transit explainers.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

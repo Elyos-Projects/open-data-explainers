@@ -1,0 +1,32 @@
+{
+  "id": "open-data-explainers-methodcard-004",
+  "title": "Methodology Card schema + Sources-&-limits + non-partisan/\"not advice\" template",
+  "project": "open-data-explainers",
+  "type": "design-spec",
+  "lane": "donated",
+  "priority": "high",
+  "domain": ["methodology", "public-data", "civic", "education"],
+  "riskTier": "low",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "small",
+  "status": "open",
+  "context": "Every open-data-explainers module computes derived metrics (counts, rates, access scores, category averages). A Methodology Card standardises how each module records what was computed, from which inputs, with what parameters, and what limits apply — so reviewers, reusers, and the public can audit it. Without a canonical schema, reviewers cannot compare across modules and statistical errors go undetected. The Sources-&-limits panel and non-partisan/'not advice' template ensure civic explainers are framed correctly.",
+  "objective": "Define the canonical Methodology Card schema and the standard Sources-&-limits panel + non-partisan/'not advice' notice template that every explainer module must include.",
+  "acceptanceCriteria": [
+    "Canonical Methodology Card schema defined: inputs, source snapshot ref, transforms, parameters, thresholds, vintage, known limits, and an explicit 'does NOT claim' list (no causation, no ranking-as-advice, no prediction).",
+    "Standard Sources-&-limits panel template and civic non-partisan / 'not advice' notice template defined and ready to embed in any explainer.",
+    "Schema is machine-readable (JSON) and also renderable as human-readable Markdown so both automated tools and human reviewers can use it.",
+    "Output licensed CC-BY-4.0.",
+    "Reviewed and approved by the named Methodology+Stats reviewer (reviewers-001)."
+  ],
+  "resources": [
+    "PLAN.md — Solution approach & architecture section (Methodology Card)",
+    "PLAN.md — Quality, review & risk gates section",
+    "TASKS.md — methodcard-004 acceptance criteria"
+  ],
+  "output": "A committed Methodology Card schema (methodology-card-schema.json or equivalent) plus a Sources-&-limits + non-partisan notice template document (e.g. methodology-card-template.md), ready for use by every downstream explainer task.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

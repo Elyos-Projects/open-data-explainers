@@ -1,0 +1,33 @@
+{
+  "id": "open-data-explainers-college-region-026",
+  "title": "Regional college-affordability explainers",
+  "project": "open-data-explainers",
+  "type": "data",
+  "lane": "donated",
+  "priority": "low",
+  "domain": ["education", "public-data", "civic"],
+  "riskTier": "low",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "The college-010 explorer presents national College Scorecard data. Per-region slices (by state, metro area, or other geographic unit) make affordability and outcome data more actionable for local students, families, and counsellors — while maintaining the same institution-level, no-ranking, not-advice approach. Region selection follows the region rubric (regionrubric-006).",
+  "objective": "Build regional college-affordability explainers (per-state or per-metro slices of the College Scorecard) extending the college-010 module, with no composite ranking and explicit 'not advice' framing.",
+  "acceptanceCriteria": [
+    "Gate-003 PASS per region: College Scorecard = US government public domain; output CC-BY-4.0; institution-level data only, no person-level data; committed gate artifact.",
+    "Each regional slice presents affordability and outcomes without a single composite 'best' ranking and without causal claims; explicit 'not advice' + data limits displayed.",
+    "Methodology Card per region: data dictionary version, transforms, vintage, and an explicit 'does NOT claim' list (no ranking-as-advice, no causation).",
+    "Figures reproduce in CI from committed code + College Scorecard snapshot; built on the shared toolkit (toolkit-002) and the college-010 module.",
+    "Methodology+Stats, Domain (college-access practitioner), License, and Accessibility reviewer sign-offs obtained per region."
+  ],
+  "resources": [
+    "PLAN.md — Scope section (college-outcomes-explorer module)",
+    "TASKS.md — college-region-026 row",
+    "College Scorecard — https://collegescorecard.ed.gov/data/",
+    "college-010, toolkit-002, gate-003, regionrubric-006 (prerequisites)"
+  ],
+  "output": "Regional college-affordability explainers (per-region committed static tools + plain-language content + Methodology Cards + gate artifacts + accessibility sign-offs).",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}
