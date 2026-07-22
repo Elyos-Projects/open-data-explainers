@@ -1,8 +1,8 @@
 # Competitive & Improvement Analysis — open-data-explainers
 
-> Analysis date: 2026-06-29 · Reviews PLAN.md v0.1.0 + TASKS.md (Elyos donated lane)
+> Analysis date: 2026-06-29 · Reviews PLAN.md v0.1.0 + TASKS.md (Hee-Lee Oss donated lane)
 
-This is a rigorous outside-in review of the Elyos good-deed umbrella **open-data-explainers**:
+This is a rigorous outside-in review of the Hee-Lee Oss good-deed umbrella **open-data-explainers**:
 plain-language explainers + small static tools built from verified open datasets (GTFS transit-access,
 STATS19 collision-hotspots, College Scorecard, OSM amenities, BLS CPI, USDA NASS county-ag, SDSS/Gaia
 astronomy), each decomposing into per-region tasks. Competitor claims are grounded in cited web sources.
@@ -236,7 +236,7 @@ output license.
 2. **Per-region scaling via prompt-caching / batch.** The shared contract means the *only* thing that
    changes per region is data + a few strings. Cache the toolkit/methodology/template context and fan out
    hundreds of county-ag / per-metro drafts cheaply; the **Message Batches API** suits the non-interactive
-   bulk drafting (and on the funded lane, runs under a hard per-task budget cap per Elyos rules).
+   bulk drafting (and on the funded lane, runs under a hard per-task budget cap per Hee-Lee Oss rules).
 3. **Plain-language QA + reading-grade + accessibility lint.** Claude flags jargon, suggests grade-8
    rewrites that *preserve* caveats, checks alt-text completeness and that every figure has a non-map data
    fallback — as an advisory pass before the human a11y reviewer.

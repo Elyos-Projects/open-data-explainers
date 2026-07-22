@@ -11,7 +11,7 @@
   "deliverable": "document",
   "tokenEstimate": "small",
   "status": "open",
-  "context": "Elyos measures success as adoption by a named beneficiary. Until a named partner confirms they will host or use a specific explainer, all tasks carry verifiedNeed:false and requestor:'TO BE SECURED'. This task closes that gap by converting an outreach thread (outreach-007) into a first confirmed partner: a named school, OER network, newsroom, civic group, or portal with a specific explainer in scope.",
+  "context": "Hee-Lee Oss measures success as adoption by a named beneficiary. Until a named partner confirms they will host or use a specific explainer, all tasks carry verifiedNeed:false and requestor:'TO BE SECURED'. This task closes that gap by converting an outreach thread (outreach-007) into a first confirmed partner: a named school, OER network, newsroom, civic group, or portal with a specific explainer in scope.",
   "objective": "Secure the first confirmed distribution partner — a named beneficiary who commits to hosting or using a specific explainer — and update affected tasks with verifiedNeed:true and a named requestor.",
   "acceptanceCriteria": [
     "A named beneficiary (school/OER network, newsroom, civic group, or civic portal) has confirmed in writing or on record that they will host or use a specific explainer.",

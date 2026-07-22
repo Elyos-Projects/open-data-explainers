@@ -21,9 +21,9 @@
     "Code is MIT-licensed; pnpm build && pnpm test && pnpm lint pass; commit is DCO signed-off."
   ],
   "resources": [
-    "C:\\code\\elyos\\planning\\projects\\open-data-explainers\\PLAN.md",
-    "C:\\code\\elyos\\governance\\proposals\\open-data-explainers.md",
-    "C:\\code\\elyos\\packages\\schema\\src\\schemas.ts",
+    "C:\\code\\hee-lee-oss\\planning\\projects\\open-data-explainers\\PLAN.md",
+    "C:\\code\\hee-lee-oss\\governance\\proposals\\open-data-explainers.md",
+    "C:\\code\\hee-lee-oss\\packages\\schema\\src\\schemas.ts",
     "GTFS specification; OpenStreetMap/ODbL; College Scorecard; BLS CPI; USDA NASS; STATS19; SDSS/Gaia; WCAG 2.2"
   ],
   "output": "A shared explainer toolkit (adapter interface + reproducible derivation pipeline + static tool scaffold + golden-fixture harness) committed to the project repo and ready for reuse by every per-region explainer task.",

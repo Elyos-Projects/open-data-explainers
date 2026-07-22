@@ -52,7 +52,7 @@ the requestor is **TO BE SECURED** until a named beneficiary agrees to host/use 
 established, general problem. We treat that *general* need as real. But the **per-explainer,
 per-beneficiary need is TO BE SECURED**: we have **not** confirmed a named school, newsroom, civic
 group, or portal that has agreed to host or use a specific explainer. Until a named beneficiary
-commits, individual tasks carry `verifiedNeed: false`. This honesty is load-bearing: Elyos's bar is
+commits, individual tasks carry `verifiedNeed: false`. This honesty is load-bearing: Hee-Lee Oss's bar is
 "delivered, not merged," and an explainer no one adopts is not delivered. M0 includes explicit
 outreach so the pilot has a real acceptance path before we build it.
 
@@ -194,7 +194,7 @@ committed `methodology.json` and golden-fixture tests.
   shape everywhere.
 - **Content/data separation** so internationalisation is a cheap downstream task (strings vs data).
 
-**Tech stack.** TypeScript, ESM, pnpm workspaces (Elyos conventions). Derivation libraries are small
+**Tech stack.** TypeScript, ESM, pnpm workspaces (Hee-Lee Oss conventions). Derivation libraries are small
 Node packages with minimal dependencies; tools are static HTML/JS (a lightweight, dependency-light
 build — e.g. a static-site/island approach) with no runtime services. Geo work uses open formats
 (GeoJSON/PMTiles) and open basemap tiles with proper attribution. Content authored in Markdown;
@@ -379,7 +379,7 @@ before publish; listing a module here does not pre-approve any specific region o
 - **Steward (last-mile owner):** TBD — owns beneficiary relationships, confirms adoption (the
   "delivered" signal), records acceptance evidence and reuse events. Critical: shipped = adoption.
 - **Partner / requestor:** TO BE SECURED — named school/newsroom/civic group/portal per module.
-- **Conflict-of-interest / non-partisan check:** civic explainers are reviewed against the Elyos
+- **Conflict-of-interest / non-partisan check:** civic explainers are reviewed against the Hee-Lee Oss
   good-deed COI/non-partisan posture; advocacy or partisan framing is rejected.
 
 ## Dependencies & integrations
@@ -392,7 +392,7 @@ before publish; listing a module here does not pre-approve any specific region o
   Data Release / Gaia Data Release; WCAG 2.2; GeoJSON/PMTiles; SPDX license identifiers.
 - **External services:** open basemap tiles (with attribution); dataset download/APIs (read-only,
   snapshotted). No proprietary services; no end-user-tracking analytics services.
-- **Elyos pieces:** Task JSON schema (`packages/schema`), donated-lane CLI workspace/PR flow
+- **Hee-Lee Oss pieces:** Task JSON schema (`packages/schema`), donated-lane CLI workspace/PR flow
   (`packages/cli`), good-deed definition + refusal guardrails. **Donated lane** — no funded-lane/
   runner dependency by default (see Security for the funded-batch exception).
 
@@ -424,13 +424,13 @@ before publish; listing a module here does not pre-approve any specific region o
   access data, store personal data, or de-anonymise.
 - **Secrets.** Derivation/tooling needs no credentials by default. If a dataset API key is ever needed
   for retrieval, the human supplies it locally; it is never written to logs, receipts, or committed
-  files (Elyos rule).
+  files (Hee-Lee Oss rule).
 - **Abuse/misuse prevention.** Refuse and flag any task that steers an explainer toward surveillance,
   targeting/profiling individuals, de-anonymisation, partisan advocacy, stigmatising a community, or
   laundering a non-open/NC/share-alike source into a permissive output.
 - **Funded-lane exception.** Default lane is donated. *If* a compute-heavy batch (e.g. processing many
   GTFS feeds or a large OSM extract) is ever run via `packages/runner`, it must carry a **hard
-  per-task budget cap**, a public cost-ledger entry, and never exceed escrow (Elyos funded-lane rule).
+  per-task budget cap**, a public cost-ledger entry, and never exceed escrow (Hee-Lee Oss funded-lane rule).
 
 ## Sustainability & maintenance
 
@@ -462,12 +462,12 @@ before publish; listing a module here does not pre-approve any specific region o
 
 ## References
 
-- Elyos work rules — `C:\code\elyos\CLAUDE.md`
-- Good Deed Definition + risk tiers — `C:\code\elyos\docs\good-deed-definition.md`
-- Task JSON schema — `C:\code\elyos\packages\schema\src\schemas.ts`
-- Proposal — `C:\code\elyos\governance\proposals\open-data-explainers.md`
-- Portfolio roadmap — `C:\code\elyos\planning\ROADMAP.md`
-- Sibling plan (conventions) — `C:\code\elyos\planning\projects\open-data-datasheets\PLAN.md`
+- Hee-Lee Oss work rules — `C:\code\hee-lee-oss\CLAUDE.md`
+- Good Deed Definition + risk tiers — `C:\code\hee-lee-oss\docs\good-deed-definition.md`
+- Task JSON schema — `C:\code\hee-lee-oss\packages\schema\src\schemas.ts`
+- Proposal — `C:\code\hee-lee-oss\governance\proposals\open-data-explainers.md`
+- Portfolio roadmap — `C:\code\hee-lee-oss\planning\ROADMAP.md`
+- Sibling plan (conventions) — `C:\code\hee-lee-oss\planning\projects\open-data-datasheets\PLAN.md`
 - GTFS specification; STATS19 (UK DfT) under the Open Government Licence v3.0
 - College Scorecard (US Dept. of Education) data documentation
 - OpenStreetMap / Open Database License (ODbL) 1.0; OSM attribution guidelines
@@ -538,7 +538,7 @@ revision work is visible.
 
 ## Review sign-off
 
-A completeness/correctness review was performed against the spec, the Elyos guardrails, and the Task
+A completeness/correctness review was performed against the spec, the Hee-Lee Oss guardrails, and the Task
 schema after applying the 25 improvements:
 
 - **Metrics measurable?** Yes — every success metric has a baseline (0/n-a) and a 6-month target, and
