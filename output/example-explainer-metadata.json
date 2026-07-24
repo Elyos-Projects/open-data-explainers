@@ -1,0 +1,22 @@
+{
+  "id": "county-ag-ne-2026",
+  "title": "Nebraska County Agriculture Profiles 2025",
+  "dataVintage": {
+    "retrievalDate": "2026-06-15T10:30:00Z",
+    "datasetVersion": "USDA NASS Quick Stats, 2025 Survey Year",
+    "sourceUrl": "https://quickstats.nass.usda.gov/",
+    "sourcePublisher": "United States Department of Agriculture, National Agricultural Statistics Service",
+    "sourceSnapshot": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "waybackUrl": "https://web.archive.org/web/20260615103000*/quickstats.nass.usda.gov/",
+      "committedPath": "data/sources/usda-nass-2025-snapshot.json"
+    },
+    "license": "public-domain",
+    "licenseUrl": "https://www.usda.gov/copyright-and-citations",
+    "attribution": "U.S. Department of Agriculture, National Agricultural Statistics Service (NASS)"
+  },
+  "refreshCadence": "annual",
+  "nextCheckDate": "2027-06-15",
+  "lastRefreshedDate": "2026-06-15",
+  "_comment": "This metadata is committed to the repo and consumed by the drift-detection module to check if the USDA NASS source has been updated. Every published figure is derived from the pinned snapshot and must be reproducible."
+}
