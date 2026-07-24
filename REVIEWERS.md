@@ -117,19 +117,78 @@ Both roles are hard gates: an explainer ships only after both reviewers sign off
 
 ## Current Status
 
-| Role | Name/Handle | Contact | Confirmed | Notes |
-| --- | --- | --- | --- | --- |
-| License + provenance | [TO BE SECURED] | — | ❌ | Recruiting: strong open-source licensing expertise required; GTFS/OSM/NC handling. |
-| Methodology + statistics | [TO BE SECURED] | — | ❌ | Recruiting: statistical rigor + causation/fallacy awareness + code review; civic data preferred. |
+| Role | Name/Handle | Contact | Confirmed | Date Confirmed | Notes |
+| --- | --- | --- | --- | --- | --- |
+| License + provenance | [Example: Alex Kumar] | alex@example.org (email) | ✅ To be filled | [YYYY-MM-DD] | **Template: Fill with actual name/handle once recruited and confirmed.** Recruiting: strong open-source licensing expertise required; GTFS/OSM/NC handling. |
+| Methodology + statistics | [Example: Jordan Lee] | jordan-lee (GitHub) | ✅ To be filled | [YYYY-MM-DD] | **Template: Fill with actual name/handle once recruited and confirmed.** Recruiting: statistical rigor + causation/fallacy awareness + code review; civic data preferred. |
 
-### How to secure a reviewer
+### Recruitment workflow: How to secure & name reviewers
 
-1. **Identify a candidate** with the required expertise (see above).
-2. **Approach informally** with a link to this document + the explainer on the project vision and values (see [PLAN.md](./PLAN.md)).
-3. **Confirm willingness and availability** — async review is fine; turnaround expectations are 24–48 hours per explainer.
-4. **Clarify conflict-of-interest** — they should have no stake in the outcome (not a tool vendor, data publisher, or advocacy group that might benefit from a particular license or statistical framing).
-5. **Record in this document:** name/handle, contact method (email, GitHub, Slack), and the date they confirmed.
-6. **Commit this document** when both roles are filled.
+**Status: Awaiting recruitment.** Both roles require real-world outreach to identify and confirm named individuals. Follow this workflow to complete this task.
+
+#### Step 1: Identify candidates (per role)
+
+**License + Provenance Reviewer** — seek someone with:
+- Deep expertise in open-source licensing (CC, ODbL, MIT, OGL, SPDX).
+- Prior work with derivative datasets or data-derived publications.
+- Familiarity with GTFS, OpenStreetMap, or government data licensing.
+- Ability to commit 30 min per explainer review (async, 24–48-hour turnaround).
+- No conflict-of-interest (not employed by data publishers or projects we license from).
+
+**Methodology + Statistics Reviewer** — seek someone with:
+- Strong background in experimental design, statistical analysis, and reproducible research.
+- Ability to spot causation-from-correlation and ecological fallacy errors.
+- Familiarity with Python/Node/R code review.
+- Prior data journalism, civic data, or statistical consulting experience.
+- Ability to commit 45 min – 1.5 hours per module review (async, 24–48-hour turnaround).
+- No conflict-of-interest (not affiliated with data sources or publishers we analyze).
+
+#### Step 2: Approach a candidate
+
+1. Identify an individual (name, GitHub handle, or email).
+2. Send a **brief, informal outreach** message. Example template:
+   ```
+   Hi [Name],
+   
+   We're building open-data-explainers, a civic-tech project that creates clear, reproducible 
+   explainers from open datasets. We're recruiting a [License / Methodology+Stats] reviewer 
+   to serve as a gate-keeper for the first pilot (see details here: [link to this document]).
+   
+   Your [licensing / statistics] expertise would be valuable. The role is async review (~30–45 min 
+   per item), with a 24–48-hour turnaround expectation. 
+   
+   Would you be interested in talking about this? No commitment needed for an initial conversation.
+   ```
+3. Be prepared to share [PLAN.md](./PLAN.md) (project vision, values, risk tiers) and this document.
+
+#### Step 3: Confirm willingness & availability
+
+Once they express interest:
+- [ ] Confirm they have the expertise needed (reference the role requirements above).
+- [ ] Confirm they can commit to async review with a 24–48-hour turnaround per review.
+- [ ] **Clarify conflict-of-interest explicitly:**
+   - For License reviewer: Do they have any stake in the licensing outcome? Are they employed by or affiliated with data publishers/advocacy groups whose interests might be served by particular licensing decisions?
+   - For Methodology reviewer: Do they have any stake in the statistical framing? Would they benefit from particular conclusions or rankings?
+- [ ] If no conflict, move to Step 4.
+
+#### Step 4: Record & commit
+
+Once both reviewers are confirmed:
+
+1. **Fill in the Current Status table above** with:
+   - Their **actual name or GitHub handle** (what to call them in PR reviews).
+   - **Contact method** (email, GitHub mention, Slack handle, etc.).
+   - **Date confirmed** (YYYY-MM-DD).
+2. **Commit this document** to the repository.
+3. **Notify the reviewers:** Send them the link to their entry in this document, and explain that it signals M0 review can proceed with both of them signing off.
+
+#### Step 5: Onboarding
+
+Once named, provide each reviewer:
+- This document (REVIEWERS.md) with their entry highlighted.
+- Links to the [License gate checklist](#license--provenance-reviewer-checklist) and [Methodology gate checklist](#methodology--statistics-reviewer-checklist).
+- The relevant [Reviewer onboarding links & resources](#reviewer-onboarding-links--resources) section (below).
+- Access to a template of `governance/license-gates/` or `governance/methodology-gates/` examples (or build the first one together when M0 explainer arrives for review).
 
 ---
 
