@@ -1,0 +1,349 @@
+{
+  "$schema": "http://json-schema.org/draft/2020-12/schema",
+  "$id": "https://hee-lee-oss.org/schemas/methodology-card-v1.json",
+  "title": "Methodology Card Schema",
+  "description": "Canonical schema for documenting how an open-data-explainers module computes derived metrics: inputs, transforms, parameters, limits, and explicit disclaimers.",
+  "type": "object",
+  "required": [
+    "metadata",
+    "inputs",
+    "transforms",
+    "parameters",
+    "vintage",
+    "knownLimits",
+    "doesNotClaim"
+  ],
+  "properties": {
+    "metadata": {
+      "type": "object",
+      "description": "Metadata about this Methodology Card",
+      "required": [
+        "title",
+        "moduleName",
+        "description",
+        "version",
+        "lastUpdated",
+        "authors"
+      ],
+      "properties": {
+        "title": {
+          "type": "string",
+          "description": "Human-readable title of this explainer/module"
+        },
+        "moduleName": {
+          "type": "string",
+          "description": "Machine-readable module identifier (e.g., 'county-ag-profiles', 'transit-access')"
+        },
+        "description": {
+          "type": "string",
+          "description": "Plain-language summary of what this explainer computes"
+        },
+        "version": {
+          "type": "string",
+          "description": "Semantic version of this Methodology Card (e.g., '1.0.0')"
+        },
+        "lastUpdated": {
+          "type": "string",
+          "format": "date-time",
+          "description": "ISO 8601 timestamp of when this card was last updated"
+        },
+        "authors": {
+          "type": "array",
+          "description": "Names and affiliations of authors/maintainers",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "inputs": {
+      "type": "array",
+      "description": "Source datasets and their provenance",
+      "items": {
+        "type": "object",
+        "required": [
+          "name",
+          "publisher",
+          "sourceUrl",
+          "retrievalDate",
+          "datasetVersion",
+          "license",
+          "licenseUrl",
+          "attribution"
+        ],
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Human-readable name of the source dataset"
+          },
+          "publisher": {
+            "type": "string",
+            "description": "Publisher or agency that maintains the source"
+          },
+          "sourceUrl": {
+            "type": "string",
+            "format": "uri",
+            "description": "URL where the source can be found"
+          },
+          "retrievalDate": {
+            "type": "string",
+            "format": "date",
+            "description": "Date when this specific snapshot of the data was retrieved (YYYY-MM-DD)"
+          },
+          "datasetVersion": {
+            "type": "string",
+            "description": "Version identifier or release number of the dataset (e.g., '2024 Q1', 'v3.2.1')"
+          },
+          "license": {
+            "type": "string",
+            "description": "SPDX identifier or name of the source license (e.g., 'CC0-1.0', 'OGL-3.0', 'ODbL-1.0')"
+          },
+          "licenseUrl": {
+            "type": "string",
+            "format": "uri",
+            "description": "URL to the full license text"
+          },
+          "attribution": {
+            "type": "string",
+            "description": "Required attribution string per license"
+          },
+          "notes": {
+            "type": "string",
+            "description": "Optional notes on data quality, caveats, or processing at retrieval"
+          }
+        }
+      }
+    },
+    "transforms": {
+      "type": "array",
+      "description": "Documented transformations and derivations applied to the input data",
+      "items": {
+        "type": "object",
+        "required": [
+          "name",
+          "description",
+          "codeLocation"
+        ],
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Short name of the transformation (e.g., 'aggregation-by-county', 'walk-distance-binning')"
+          },
+          "description": {
+            "type": "string",
+            "description": "Plain-language description of what this transform does and why"
+          },
+          "codeLocation": {
+            "type": "string",
+            "description": "Path(s) to committed source code implementing this transform (e.g., 'src/derive.ts#L42-L120')"
+          },
+          "inputFields": {
+            "type": "array",
+            "description": "Names of input fields/columns used by this transform",
+            "items": {
+              "type": "string"
+            }
+          },
+          "outputFields": {
+            "type": "array",
+            "description": "Names of output fields/columns produced by this transform",
+            "items": {
+              "type": "string"
+            }
+          },
+          "normalisation": {
+            "type": "string",
+            "description": "If applicable, how data is normalized (e.g., 'per-capita', 'rate-per-100k', 'percentage')"
+          }
+        }
+      }
+    },
+    "parameters": {
+      "type": "object",
+      "description": "Configurable thresholds, weights, and parameters used in derivation",
+      "additionalProperties": {
+        "type": "object",
+        "required": [
+          "value",
+          "description",
+          "rationale"
+        ],
+        "properties": {
+          "value": {
+            "oneOf": [
+              { "type": "number" },
+              { "type": "string" },
+              { "type": "boolean" },
+              { "type": "array" }
+            ],
+            "description": "The parameter value"
+          },
+          "description": {
+            "type": "string",
+            "description": "Plain-language explanation of what this parameter controls"
+          },
+          "rationale": {
+            "type": "string",
+            "description": "Why this value was chosen; evidence or justification"
+          },
+          "unit": {
+            "type": "string",
+            "description": "Unit of measurement if applicable (e.g., 'meters', 'percentage', 'minutes')"
+          }
+        }
+      },
+      "examples": {
+        "walkDistanceThreshold": {
+          "value": 800,
+          "unit": "meters",
+          "description": "Maximum walking distance to consider transit accessible",
+          "rationale": "Aligns with US transit-planning convention (approximately 1/2 mile)"
+        },
+        "minimumCellCount": {
+          "value": 5,
+          "unit": "count",
+          "description": "Minimum number of records in a geographic/temporal bin before publishing",
+          "rationale": "PII/de-identification standard to prevent identification of individuals"
+        }
+      }
+    },
+    "vintage": {
+      "type": "object",
+      "description": "Data currency and temporal scope of this explainer",
+      "required": [
+        "dataStartDate",
+        "dataEndDate"
+      ],
+      "properties": {
+        "dataStartDate": {
+          "type": "string",
+          "format": "date",
+          "description": "Earliest date included in the computed metrics (YYYY-MM-DD)"
+        },
+        "dataEndDate": {
+          "type": "string",
+          "format": "date",
+          "description": "Most recent date included in the computed metrics (YYYY-MM-DD)"
+        },
+        "currency": {
+          "type": "string",
+          "description": "Plain-language currency statement (e.g., 'updated quarterly', 'static as of 2024-06-30')"
+        },
+        "refreshCadence": {
+          "type": "string",
+          "description": "How often this explainer is intended to be re-run (e.g., 'annual', 'quarterly', 'never')"
+        },
+        "staleness": {
+          "type": "object",
+          "description": "Staleness thresholds and alerts",
+          "properties": {
+            "staleAfterDays": {
+              "type": "integer",
+              "description": "Number of days after dataEndDate before flagging as stale"
+            },
+            "outdatedAfterDays": {
+              "type": "integer",
+              "description": "Number of days after dataEndDate before flagging as outdated"
+            }
+          }
+        }
+      }
+    },
+    "knownLimits": {
+      "type": "array",
+      "description": "Documented limitations, assumptions, and data quality caveats",
+      "items": {
+        "type": "object",
+        "required": [
+          "category",
+          "description"
+        ],
+        "properties": {
+          "category": {
+            "type": "string",
+            "enum": [
+              "data-coverage",
+              "data-quality",
+              "methodological",
+              "geographic",
+              "temporal",
+              "statistical",
+              "other"
+            ],
+            "description": "Category of limitation"
+          },
+          "description": {
+            "type": "string",
+            "description": "Plain-language description of the limitation"
+          },
+          "impact": {
+            "type": "string",
+            "description": "How this limitation affects the reliability or applicability of the results"
+          },
+          "mitigation": {
+            "type": "string",
+            "description": "Any steps taken to mitigate this limitation"
+          }
+        }
+      }
+    },
+    "doesNotClaim": {
+      "type": "object",
+      "description": "Explicit disclaimers: things this explainer deliberately does NOT claim",
+      "properties": {
+        "causation": {
+          "type": "string",
+          "description": "Why no causal claims are made (e.g., 'These are observational data; we show correlation, not causation')"
+        },
+        "ranking": {
+          "type": "string",
+          "description": "Why places/entities are not ranked as 'best/worst' (e.g., 'This is not a ranking; differences may be due to data quality or methodology')"
+        },
+        "prediction": {
+          "type": "string",
+          "description": "Why no future predictions are made (e.g., 'This explainer shows historical patterns only, not forecasts')"
+        },
+        "advice": {
+          "type": "string",
+          "description": "Explicit statement that this is not actionable advice"
+        },
+        "other": {
+          "type": "array",
+          "description": "Other specific claims not made by this explainer",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "causation",
+        "ranking",
+        "prediction",
+        "advice"
+      ]
+    },
+    "reproducibility": {
+      "type": "object",
+      "description": "Information on how to reproduce this explainer's results",
+      "properties": {
+        "codeRepository": {
+          "type": "string",
+          "format": "uri",
+          "description": "Git repository URL containing the derivation code"
+        },
+        "codeCommit": {
+          "type": "string",
+          "description": "Git commit hash of the version that produced these results"
+        },
+        "testHarness": {
+          "type": "string",
+          "description": "Path to golden-fixture tests that verify reproducibility (e.g., 'test/fixtures/golden.test.ts')"
+        },
+        "buildInstructions": {
+          "type": "string",
+          "description": "Command to reproduce (e.g., 'pnpm build && pnpm test')"
+        }
+      }
+    }
+  }
+}
