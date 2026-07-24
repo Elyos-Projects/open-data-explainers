@@ -1,0 +1,26 @@
+fix: improve ACCESSIBILITY.md clarity and reusability for downstream tasks
+
+**Substantive improvements:**
+- Fixed broken internal references (section 9 → 10) where checklist is actually located
+- Renamed unclear "Signpost Checklist" to "Accessibility Reviewer Sign-Off Checklist"
+- Added explicit reference instructions in Integration section for how downstream tasks should cite and use this standard
+- Enhanced developer workflow with concrete examples: when/how to test contrast, keyboard navigation, alt text, color blindness; what evidence to attach to PR
+- Enhanced accessibility reviewer workflow with step-by-step testing procedures, example review comment format, and specific tools/techniques for each verification
+- Restructured sign-off checklist with clearer headers, specific pass criteria, and practical testing instructions
+- Improved checklist approval/signature section with explicit attestation language and approval decision boxes
+
+**Why these changes matter:**
+The document is now ready to be referenced by every downstream explainer task because:
+1. All internal cross-references are correct and won't confuse downstream users
+2. Developers have a clear, actionable workflow they can follow at each stage
+3. Reviewers have a reusable, copyable checklist they can use for every explainer
+4. The checklist title and instructions make it clear this is a live template document
+
+**Acceptance criteria verified:**
+✓ Accessibility standard specifies WCAG 2.2 AA compliance with concrete requirements
+✓ Reading grade ≤ 8 specified with recommended automated checking approach
+✓ Requirements for alt-text, colour-blind-safe palettes, accessible data tables stated
+✓ Sign-off checklist included and ready for downstream explainer tasks to copy and use
+✓ Licensed CC-BY-4.0
+
+Co-Authored-By: Claude Haiku 4.5 <noreply@anthropic.com>
