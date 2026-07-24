@@ -25,6 +25,7 @@
     "TASKS.md — collision-018 acceptance criteria",
     "STATS19 data — https://www.data.gov.uk/dataset/cb7ae6f0-4be6-4935-9277-47e5ce24a11f/road-safety-data",
     "Open Government Licence v3.0 — https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
+    "REGION-RUBRIC.md — Region-selection rubric and harm-scan checklist (prerequisite for region selection)",
     "toolkit-002, gate-003, regionrubric-006 (prerequisites)"
   ],
   "output": "A collision-hotspots explainer for at least one area (committed static tool + plain-language content + Methodology Card + gate artifact + harm-scan record + accessibility sign-off).",
