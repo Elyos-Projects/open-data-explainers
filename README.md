@@ -8,16 +8,21 @@ Vast amounts of public, openly-licensed data exist — transit timetables, road-
 
 This is a **Hee-Lee Oss** good-deed project. Contributors pull a task, do it with their own coding agent, and open a PR. Get started: https://github.com/Hee-Lee-Oss-Projects/hee-lee-oss-downloads
 
-## Plan
+## Getting started
+- [CONTRIBUTING.md](./CONTRIBUTING.md) — how to report errors, suggest improvements, and contribute work
 - [PLAN.md](./PLAN.md) — robust enterprise plan (vision, architecture, roadmap, risks; includes an applied-improvements appendix + review sign-off)
 - [TASKS.md](./TASKS.md) — schema-mapped task backlog
 - [tasks/](./tasks/) — ready-to-pull task JSON(s)
+- [CORRECTIONS.md](./CORRECTIONS.md) — public corrections process & per-explainer changelog convention
 
 ## Contribute
 ```bash
 hee-lee-oss browse
 hee-lee-oss next --repo Hee-Lee-Oss-Projects/open-data-explainers --no-fork
 ```
+
+### Found an error?
+If you spot an incorrect figure, stale data, or misleading claim in an explainer, please report it using our [GitHub issue template](.github/ISSUE_TEMPLATE/correction.md). See our [corrections process](./CORRECTIONS.md) for how we triage, respond, and track fixes — including severity levels and expected timelines.
 
 ## Licensing & review
 - Code MIT; content CC-BY; per-dataset license verified.
