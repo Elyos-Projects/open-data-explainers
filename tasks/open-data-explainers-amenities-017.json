@@ -25,6 +25,7 @@
     "TASKS.md — amenities-017 acceptance criteria",
     "OpenStreetMap — https://www.openstreetmap.org/",
     "ODbL 1.0 — https://opendatacommons.org/licenses/odbl/1-0/",
+    "REGION-RUBRIC.md — Region-selection rubric and harm-scan checklist (prerequisite for region selection)",
     "osmkit-016, gate-003, regionrubric-006, toolkit-002 (prerequisites)"
   ],
   "output": "An amenities-near-me derived POI set for at least one area (committed static tool + plain-language content + ODbL gate artifact + harm-scan record + accessibility sign-off).",

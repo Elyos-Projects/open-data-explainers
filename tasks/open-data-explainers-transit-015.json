@@ -24,7 +24,8 @@
     "PLAN.md — Data, licensing & compliance (GTFS feeds row)",
     "TASKS.md — transit-015 acceptance criteria",
     "GTFS specification — https://gtfs.org/",
-    "transit-method-014, toolkit-002, gate-003 (prerequisites)"
+    "REGION-RUBRIC.md — Region-selection rubric and harm-scan checklist (prerequisite for region selection)",
+    "transit-method-014, toolkit-002, gate-003, regionrubric-006 (prerequisites)"
   ],
   "output": "A transit-access explainer for at least one metro (committed static tool + plain-language content + Methodology Card + per-feed gate artifacts + accessibility sign-off + harm-scan record).",
   "requestor": "TO BE SECURED",
