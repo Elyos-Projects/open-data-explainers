@@ -1,0 +1,138 @@
+/**
+ * DataCurrencyBadge styles — light and dark mode support.
+ * Integrates with standard CSS custom properties for color theming.
+ *
+ * Color properties used:
+ *   --color-bg-subtle: subtle background (default: very light gray)
+ *   --color-bg-dark-subtle: dark mode background (default: very dark gray)
+ *   --color-border-subtle: subtle border (default: light gray)
+ *   --color-border-dark-subtle: dark mode border (default: dark gray)
+ *   --color-link: hyperlink color (default: blue)
+ *   --color-text: primary text (default: near-black)
+ *   --color-text-dark: dark mode text (default: near-white)
+ *
+ * If these are not defined, fallbacks apply.
+ */
+
+.data-currency-badge {
+  border: 1px solid var(--color-border-subtle, #e0e0e0);
+  background: var(--color-bg-subtle, #f9f9f9);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  font-size: 0.9375rem;
+  line-height: 1.5;
+  margin: 1.5rem 0;
+  color: var(--color-text, #1a1a1a);
+}
+
+.data-currency-badge__header {
+  margin-bottom: 0.75rem;
+}
+
+.data-currency-badge__title {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-text, #1a1a1a);
+}
+
+.data-currency-badge__content {
+  margin-bottom: 1rem;
+}
+
+.data-currency-badge__vintage,
+.data-currency-badge__cadence,
+.data-currency-badge__status {
+  margin: 0.5rem 0;
+}
+
+.data-currency-badge__status {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 500;
+}
+
+.data-currency-badge__icon {
+  font-size: 1.125rem;
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+.data-currency-badge__status--current {
+  color: var(--color-text-success, #16a34a);
+}
+
+.data-currency-badge__status--stale {
+  color: var(--color-text-warning, #ea580c);
+}
+
+.data-currency-badge__links {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 0.75rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--color-border-subtle, #e0e0e0);
+}
+
+.data-currency-badge__link {
+  color: var(--color-link, #0066cc);
+  text-decoration: underline;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.data-currency-badge__link:hover {
+  color: var(--color-link-hover, #0052a3);
+  text-decoration: none;
+}
+
+.data-currency-badge__link:focus {
+  outline: 2px solid var(--color-link, #0066cc);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .data-currency-badge {
+    background: var(--color-bg-dark-subtle, #1a1a1a);
+    border-color: var(--color-border-dark-subtle, #444);
+    color: var(--color-text-dark, #e0e0e0);
+  }
+
+  .data-currency-badge__title {
+    color: var(--color-text-dark, #e0e0e0);
+  }
+
+  .data-currency-badge__links {
+    border-top-color: var(--color-border-dark-subtle, #444);
+  }
+
+  .data-currency-badge__link {
+    color: var(--color-link-dark, #66b3ff);
+  }
+
+  .data-currency-badge__link:hover {
+    color: var(--color-link-dark-hover, #99ccff);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .data-currency-badge {
+    padding: 0.75rem;
+    font-size: 0.875rem;
+    margin: 1rem 0;
+  }
+
+  .data-currency-badge__links {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .data-currency-badge__link {
+    display: block;
+  }
+}
