@@ -213,7 +213,46 @@ This corresponds to readable content for:
 
 ---
 
-## 8. Multimedia & Interactive Elements
+## 8. Integration: How Downstream Explainer Tasks Use This Standard
+
+This accessibility standard is a **blocking dependency** for all published open-data-explainers. Every explainer task must reference this document and include accessibility review before publishing.
+
+### For Explainer Developers
+
+When building an explainer (e.g., county-ag profiles, CPI inflation, transit-access, college-outcomes):
+
+1. **Before development:** Read sections 1–7 of this standard to understand the requirements
+2. **During development:**
+   - Test contrast ratios (section 2) as you build; use WebAIM Contrast Checker or Chrome DevTools
+   - Implement keyboard navigation (section 3) from the start—do not retrofit
+   - Write alt text for all non-decorative images (section 4) as you create them
+   - Use an accessible color palette (section 5); test with Coblis or Sim Daltonism
+   - Structure any data tables using semantic HTML (section 6)
+   - Keep reading grade ≤ 8; test with Hemingway Editor or Readable.com and record the final score
+3. **Before submitting for review:** Run through the sign-off checklist (section 9) yourself to catch issues early
+4. **In your PR or submission:**
+   - Reference this document: "Accessibility reviewed against [ACCESSIBILITY.md](./ACCESSIBILITY.md)"
+   - Include the final reading grade score (e.g., "Flesch-Kincaid: grade 7.2")
+   - Attach evidence: screenshot of contrast checker, Hemingway Editor output, color-blindness simulator test
+   - Request sign-off from an Accessibility reviewer
+
+### For Accessibility Reviewers
+
+When approving an explainer for publication:
+
+1. Use the sign-off checklist (section 9) as your review template
+2. Test keyboard navigation yourself using Tab, Shift+Tab, Enter, and arrow keys
+3. Test with a screen reader (NVDA, JAWS, or Apple VoiceOver) on at least one major feature
+4. Verify the reading grade score is ≤ 8 using an automated tool (Hemingway, Readable, or Word/Docs)
+5. Review alt text for accuracy and clarity; check that decorative images are marked correctly
+6. Confirm color palette is accessible using a color-blindness simulator
+7. Sign the checklist and record your approval in the PR
+
+If any criterion fails, request changes before approval. Document any justified exceptions in the PR (see section 13).
+
+---
+
+## 9. Multimedia & Interactive Elements
 
 ### Video & Audio
 
@@ -230,7 +269,7 @@ This corresponds to readable content for:
 
 ---
 
-## 9. Signpost Checklist for Accessibility Reviewer
+## 10. Signpost Checklist for Accessibility Reviewer
 
 Use this checklist before approving an explainer for publication.
 
@@ -294,7 +333,7 @@ Use this checklist before approving an explainer for publication.
 
 ---
 
-## 10. Resources & Tools
+## 11. Resources & Tools
 
 ### Standards & References
 
@@ -323,7 +362,7 @@ Use this checklist before approving an explainer for publication.
 
 ---
 
-## 11. Frequently Asked Questions
+## 12. Frequently Asked Questions
 
 **Q: What if an image is a screenshot or contains text that's part of the image?**  
 A: Describe the screenshot's purpose and include the visible text in alt text. If the text is essential, also include it in the surrounding content.
@@ -342,7 +381,7 @@ A: AA is our baseline. We welcome AAA enhancements (e.g., 7:1 contrast, audio de
 
 ---
 
-## 12. Exceptions & Appeals
+## 13. Exceptions & Appeals
 
 The accessibility standard is mandatory. However, genuine exceptions may exist. If you believe an exception is justified:
 
@@ -355,7 +394,7 @@ All exceptions must be approved by the Accessibility reviewer and documented in 
 
 ---
 
-## 13. License
+## 14. License
 
 This document is licensed under the **Creative Commons Attribution 4.0 International (CC-BY-4.0)** license.
 
