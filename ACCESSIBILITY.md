@@ -217,38 +217,73 @@ This corresponds to readable content for:
 
 This accessibility standard is a **blocking dependency** for all published open-data-explainers. Every explainer task must reference this document and include accessibility review before publishing.
 
+**How to reference this standard:** In your task, PR description, or submission, include:
+```
+Accessibility reviewed against [ACCESSIBILITY.md](./ACCESSIBILITY.md) — WCAG 2.2 AA + reading grade ≤ 8.
+Used [Accessibility Reviewer Sign-Off Checklist](#10-accessibility-reviewer-sign-off-checklist) for verification.
+```
+
 ### For Explainer Developers
 
 When building an explainer (e.g., county-ag profiles, CPI inflation, transit-access, college-outcomes):
 
-1. **Before development:** Read sections 1–7 of this standard to understand the requirements
-2. **During development:**
-   - Test contrast ratios (section 2) as you build; use WebAIM Contrast Checker or Chrome DevTools
-   - Implement keyboard navigation (section 3) from the start—do not retrofit
-   - Write alt text for all non-decorative images (section 4) as you create them
-   - Use an accessible color palette (section 5); test with Coblis or Sim Daltonism
-   - Structure any data tables using semantic HTML (section 6)
-   - Keep reading grade ≤ 8; test with Hemingway Editor or Readable.com and record the final score
-3. **Before submitting for review:** Run through the sign-off checklist (section 9) yourself to catch issues early
+1. **Before development:** Read sections 1–7 of this standard to understand the requirements and baseline expectations for all published explainers.
+
+2. **During development — test incrementally:**
+   - **Contrast (section 2):** As you design, test color pairs with WebAIM Contrast Checker or Chrome DevTools. Aim for 4.5:1 for normal text, 3:1 for large text and UI components. Do not wait until the end—contrast is part of the design, not a post-hoc fix.
+   - **Keyboard navigation (section 3):** Implement tab order and focus indicators from the start. Test with keyboard alone (no mouse). Common issues: missing skip links, hidden focus indicators, tabs trapped in widgets. Retrofit is 3× harder than building accessible.
+   - **Alt text (section 4):** Write alt text as you add images. Describe what the image shows and its purpose, not "image of chart" or "logo." For charts/graphs, include key insight or provide a data table alternative.
+   - **Color palette (section 5):** Use an accessible palette (blue/orange/grey or teal/gold/grey). Never rely on color alone to convey information. Test with Coblis or Sim Daltonism for red/green colorblindness.
+   - **Data tables (section 6):** If using tables, use semantic HTML (`<thead>`, `<th scope="col">`, `<caption>`). Simple tables are more accessible than complex ones—consider splitting large tables.
+   - **Reading grade (section 7):** Use short sentences (15–20 words), short paragraphs, active voice, and common words. Test with Hemingway Editor or Readable.com after each major section. Record the final score and include it in your PR.
+
+3. **Before submitting for review:** Self-check using the Accessibility Reviewer Sign-Off Checklist (section 10). Mark which items you've verified. This catches 80% of issues early.
+
 4. **In your PR or submission:**
-   - Reference this document: "Accessibility reviewed against [ACCESSIBILITY.md](./ACCESSIBILITY.md)"
-   - Include the final reading grade score (e.g., "Flesch-Kincaid: grade 7.2")
-   - Attach evidence: screenshot of contrast checker, Hemingway Editor output, color-blindness simulator test
-   - Request sign-off from an Accessibility reviewer
+   ```
+   ## Accessibility
+   - [ACCESSIBILITY.md](./ACCESSIBILITY.md) — WCAG 2.2 AA standard applied
+   - Reading grade: Flesch-Kincaid **7.2** (target ≤ 8) ✓
+   - Keyboard navigation: Tab order tested, all elements reachable ✓
+   - Contrast: Verified 4.5:1 on primary text, 3:1 on interactive elements ✓
+   - Alt text: All non-decorative images described; charts include data table fallback ✓
+   - Color palette: Tested with Coblis (red/green blindness) ✓
+   
+   **Evidence attached:** contrast-checker.png, hemingway-score.png, keyboard-test-log.txt
+   
+   **Sign-off requested from:** Accessibility reviewer
+   ```
+   - Attach screenshots of contrast checker, reading-grade tool output, and color-blindness simulator tests
+   - Request explicit sign-off from an Accessibility reviewer before merge
 
 ### For Accessibility Reviewers
 
 When approving an explainer for publication:
 
-1. Use the sign-off checklist (section 9) as your review template
-2. Test keyboard navigation yourself using Tab, Shift+Tab, Enter, and arrow keys
-3. Test with a screen reader (NVDA, JAWS, or Apple VoiceOver) on at least one major feature
-4. Verify the reading grade score is ≤ 8 using an automated tool (Hemingway, Readable, or Word/Docs)
-5. Review alt text for accuracy and clarity; check that decorative images are marked correctly
-6. Confirm color palette is accessible using a color-blindness simulator
-7. Sign the checklist and record your approval in the PR
+1. **Copy the Accessibility Reviewer Sign-Off Checklist** (section 10) into your review PR comment or create a review checklist document
+2. **Perform hands-on testing:**
+   - Test keyboard navigation yourself using Tab, Shift+Tab, Enter, and arrow keys — mark this item on the checklist
+   - Test with a screen reader (NVDA, JAWS, or Apple VoiceOver) on at least one major feature — mark this item
+3. **Verify readability:** Check the reading grade score is ≤ 8 using an automated tool (Hemingway, Readable, or Word/Docs) — include the final score in your review
+4. **Review visual design:**
+   - Confirm all alt text is descriptive and accurate; check that decorative images are correctly marked
+   - Verify color palette is accessible using a color-blindness simulator (Coblis or Sim Daltonism)
+   - Validate contrast ratios using WebAIM or Chrome DevTools
+5. **Check WCAG compliance:** Go through each category of the checklist (WCAG 2.2 AA, Images, Color & Design, Data Tables, Plain Language, Multimedia, General Accessibility) and mark items as pass or fail
+6. **Sign off:** Complete the reviewer name and approval date fields, add any notes or approved exceptions (documented in section 13), and submit your approval
+7. **Flag issues:** If any criterion fails, request changes before approval. Document any justified exceptions in the PR with reference to section 13
 
-If any criterion fails, request changes before approval. Document any justified exceptions in the PR (see section 13).
+**Example review comment:**
+```
+Accessibility review for [explainer-name]:
+- [x] Tested keyboard navigation — all interactive elements reachable
+- [x] Screen reader testing with NVDA — navigable and labeled correctly
+- [x] Reading grade verified: Flesch-Kincaid 7.4 (✓ ≤ 8)
+- [ ] Color blindness simulation — failing on chart legend, needs redesign
+- [ ] Contrast ratio on hover state — 2.8:1, need 4.5:1
+
+*Approved with exception for hover state (alternative high-contrast hover mode implemented).*
+```
 
 ---
 
@@ -269,17 +304,23 @@ If any criterion fails, request changes before approval. Document any justified 
 
 ---
 
-## 10. Signpost Checklist for Accessibility Reviewer
+## 10. Accessibility Reviewer Sign-Off Checklist
 
-Use this checklist before approving an explainer for publication.
+**Instructions:** Copy this entire checklist into your review PR comment or create a separate review checklist document. As you test each category, mark items ✓ (pass), ✗ (fail), or N/A (not applicable). For any failures, note the specific issue and request a fix before approval. Reference section 13 (Exceptions & Appeals) if a justified exception is proposed.
+
+---
 
 ### WCAG 2.2 AA Compliance
 
-- [ ] **Contrast:** All text meets 4.5:1 (normal) or 3:1 (large) ratio; interactive elements meet 3:1
-- [ ] **Keyboard navigation:** Tab order is logical; all interactive elements are reachable via keyboard; focus is always visible
-- [ ] **No keyboard traps:** User can exit any element using keyboard alone
-- [ ] **Links & buttons:** All links have descriptive text; buttons have visible labels or aria-labels
-- [ ] **Skip link:** Page includes "Skip to main content" link if navigation is present
+- [ ] **Contrast ratio — normal text:** All text smaller than 18pt or lighter than bold meets 4.5:1 ratio (test with WebAIM or DevTools)
+- [ ] **Contrast ratio — large text:** Text 18pt+ or 14pt+ bold meets 3:1 ratio
+- [ ] **Contrast ratio — interactive elements:** Buttons, form inputs, focus indicators, and graphical elements meet 3:1 ratio
+- [ ] **Keyboard navigation:** Tab order follows a logical, top-to-bottom left-to-right pattern; all interactive elements are reachable via Tab and Shift+Tab
+- [ ] **Focus visible:** All focused elements show a clear, visible indicator (outline, border, or background change); focus indicators are never hidden or removed
+- [ ] **No keyboard traps:** User can navigate away from any element (dropdown, modal, widget) using keyboard alone without getting stuck
+- [ ] **Links & buttons:** Every link has descriptive link text (not "click here"); every button has a visible label or aria-label; purpose is clear without context
+- [ ] **Skip link:** Page includes a "Skip to main content" link if navigation menu is present (test that it works)
+- [ ] **Form accessibility:** Any form inputs have associated labels; error messages are clear and linked to fields; recovery options are provided
 
 ### Images & Visual Content
 
@@ -320,16 +361,22 @@ Use this checklist before approving an explainer for publication.
 - [ ] **Semantic HTML:** Uses `<header>`, `<main>`, `<article>`, `<nav>` where appropriate
 - [ ] **Error messages:** Any form inputs have clear error messages and recovery options
 
-### Approval
+### Reviewer Attestation & Approval
 
-- [ ] I have tested this explainer with keyboard navigation only
-- [ ] I have tested with a screen reader (e.g., NVDA, JAWS, or Apple VoiceOver)
-- [ ] I have verified reading grade using an automated tool and documented the score
-- [ ] I have reviewed all alt text for accuracy and clarity
+By checking these boxes and signing below, you attest that this explainer meets the WCAG 2.2 AA standard and plain-language requirements, and is ready for publication:
 
-**Reviewer name:** ________________  
-**Approval date:** ________________  
-**Notes/exceptions:** 
+- [ ] I have tested keyboard navigation end-to-end using only Tab, Shift+Tab, Enter, and arrow keys — all interactive elements work
+- [ ] I have tested with a screen reader (NVDA, JAWS, or Apple VoiceOver) on at least one major feature — navigation and content are clear
+- [ ] I have verified reading grade using an automated tool (Hemingway, Readable.com, or Word/Docs) and confirmed ≤ 8 — final score documented
+- [ ] I have reviewed all alt text for descriptiveness and accuracy; verified that decorative images are correctly marked
+- [ ] I have checked the color palette with a color-blindness simulator; confirmed information is not conveyed by color alone
+- [ ] I have verified all acceptance criteria above are marked pass or documented as approved exceptions
+
+**Accessibility Reviewer Name:** ________________  
+**Approval Date:** ________________ (YYYY-MM-DD)  
+**Approved?** ☐ Yes, ready for publication   ☐ No, changes required (see Notes below)  
+
+**Notes/exceptions/required changes:** 
 
 ---
 
