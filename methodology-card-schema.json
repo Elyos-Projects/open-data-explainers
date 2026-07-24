@@ -1,4 +1,5 @@
 {
+  "$comment": "License: CC-BY-4.0 (https://creativecommons.org/licenses/by/4.0/) | Maintainer: Hee-Lee Oss Explainers Project (https://github.com/hee-lee-oss/open-data-explainers) | Attribution required when reused or adapted.",
   "$schema": "http://json-schema.org/draft/2020-12/schema",
   "$id": "https://hee-lee-oss.org/schemas/methodology-card-v1.json",
   "title": "Methodology Card Schema",
