@@ -19,6 +19,9 @@ hee-lee-oss browse
 hee-lee-oss next --repo Hee-Lee-Oss-Projects/open-data-explainers --no-fork
 ```
 
+### Found an error?
+If you spot an incorrect figure, stale data, or misleading claim in an explainer, please report it. See our [corrections process](./CORRECTIONS.md) for how to report, how we triage, and how fixes are tracked.
+
 ## Licensing & review
 - Code MIT; content CC-BY; per-dataset license verified.
 - Risk tier **low-med** — deeds are *delivered, not merged*; a domain reviewer (and expert sign-off for any high-stakes content) must approve before merge.
