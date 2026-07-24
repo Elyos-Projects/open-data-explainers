@@ -1,20 +1,75 @@
 # Region-Selection Rubric & Harm-Scan Checklist
 
 **License:** CC-BY-4.0  
-**Version:** 1.0  
+**Version:** 1.1  
 **Last updated:** 2026-07-24
 
-## Overview
+## Quick Start: Use These Checklists
 
-This document provides a principled rubric for selecting regions (counties, metros, neighborhoods, or other geographic areas) for per-region explainer tasks, and a mandatory harm-scan checklist for place-level modules. Together, they prevent cherry-picking bias, geographic cherry-picking, and unintended stigmatization of communities.
+**Every contributor selecting a region for a new per-region explainer task must complete the appropriate checklist(s) below before opening a task.** Region selection is **not optional**; it is a prerequisite for defining the scope of any per-region explainer.
 
-**Who uses this:** Every contributor selecting a region for a new per-region explainer task must apply this rubric and checklist before opening a task. Region selection is **not optional**; it is a prerequisite for defining the scope of any per-region explainer.
+### Region-Selection Checklist (Required for All Per-Region Tasks)
+
+Before choosing a region, verify:
+
+- [ ] **Criterion 1: Data Availability** — Source data is identified, accessible, openly-licensed, current, and verified (not synthetic or re-hosted).
+- [ ] **Criterion 2: Community Need or Coverage** — Region is chosen for demonstrated need or gap, not because it supports a narrative; selection is outcome-neutral.
+- [ ] **Criterion 3: No Cherry-Picking** — Selection occurred before analyzing figures; regions are included regardless of expected outcomes.
+- [ ] **Written justification recorded** — Document in the task's context field: why this region was chosen (e.g., "No prior analysis exists" or "Local partner requested coverage").
+- [ ] **Harm-scan completed (if place-level)** — If this task breaks down findings by geographic area, complete the harm-scan checklist below before region approval.
+
+### Harm-Scan Checklist Template (Required for Place-Level Tasks Only)
+
+**Place-level tasks** (transit-access, collision-hotspots, amenities, or any module that aggregates/ranks by neighborhood or area) require a harm scan. **Non-place-level tasks** (national/aggregate-only, or organized by institution/category, not place) skip this.
+
+For **each region** in a place-level task, answer all four questions below. If any answer is "yes" or "uncertain," document your mitigation strategy. All four must be signed off before region approval.
+
+```
+## Harm Scan — [Region name] — [Module name]
+
+**Question 1: Could this explainer stigmatize a neighborhood or community?**
+- Answer: [Yes / No / Uncertain]
+- Mitigation: [If yes/uncertain, describe framing strategy]
+- Signed off by: [Reviewer name]
+
+**Question 2: Could this explainer read as redlining-adjacent?**
+- Answer: [Yes / No / Uncertain]
+- Mitigation: [If yes/uncertain, describe how framing avoids deficit language]
+- Signed off by: [Reviewer name]
+
+**Question 3: Could this explainer enable targeting or profiling?**
+- Answer: [Yes / No / Uncertain]
+- Mitigation: [If yes/uncertain, describe aggregation and geo-precision measures]
+- Signed off by: [Reviewer name]
+
+**Question 4: Could this explainer be mistaken for advice or a ranking?**
+- Answer: [Yes / No / Uncertain]
+- Mitigation: [If yes/uncertain, describe "not advice" framing]
+- Signed off by: [Reviewer name]
+
+**Overall:** [PASS / FLAG / ESCALATE]
+- PASS: Region approved for task.
+- FLAG: Mitigations required; resubmit after addressing.
+- ESCALATE: Consult Steward or governance panel before proceeding.
+```
 
 ---
 
-## Part 1: Region-Selection Rubric
+## Detailed Guidance
 
-When choosing a region for a new explainer task, the selection must satisfy **all three criteria** below. Deviation requires explicit written justification.
+This section explains the criteria, harm-scan questions, and provides worked examples for reference.
+
+## Overview
+
+This document provides a principled rubric for selecting regions (counties, metros, neighborhoods, or other geographic areas) for per-region explainer tasks, and a mandatory harm-scan checklist for place-level modules. Together, they prevent cherry-picking bias, geographic bias, and unintended stigmatization of communities.
+
+**Why this matters:** Without a rubric, region selection can cherry-pick areas to support a story, introduce geographic bias, or inadvertently stigmatize communities—especially for place-level modules like transit-access, amenities, and collision-hotspots.
+
+---
+
+## Understanding the Three Criteria
+
+When choosing a region for a new explainer task, the selection must satisfy **all three criteria** below. Deviation requires explicit written justification. Read each criterion to understand what evidence to gather when completing the checklist above.
 
 ### Criterion 1: Data Availability
 
@@ -59,19 +114,7 @@ When choosing a region for a new explainer task, the selection must satisfy **al
 
 ---
 
-### Region-Selection Checklist
-
-Before opening a per-region task, complete this checklist:
-
-- [ ] **Criterion 1: Data Availability** — Source is identified, licensed, accessible, and versioned.
-- [ ] **Criterion 2: Community Need or Coverage** — Rationale is documented; region fills a gap or meets a stated need, not chosen for narrative advantage.
-- [ ] **Criterion 3: No Cherry-Picking** — Selection was outcome-neutral; region included regardless of expected figures.
-- [ ] **Written justification recorded** — A one-sentence rationale is included in the task's `context` field (see TASKS.md template).
-- [ ] **Harm scan checklist (Part 2 below) completed** — If this is a place-level module, the harm-scan checklist is signed off before region selection is finalized.
-
----
-
-## Part 2: Harm-Scan Checklist
+## Understanding the Harm-Scan Questions
 
 For **place-level modules** (those that break down findings by neighborhood, county, region, or other geographic area), a mandatory harm scan must be completed before region selection and before publication. Place-level modules include:
 
@@ -158,41 +201,6 @@ For **each region** in a place-level task, answer all four questions below. If a
 - [ ] **No causal claims** — the explainer does not claim that transit access *causes* better outcomes or that high collision rates are *caused by* neighborhood characteristics (only observational data is presented).
 - [ ] **Interface design discourages ranking** — tables/maps do not sort by a single "best/worst" metric; multiple dimensions are presented side-by-side without a hierarchy.
 - [ ] Title and summary do not include comparative framing ("best transit access," "safest roads") without a clear disclaimer.
-
----
-
-### Harm-Scan Checklist Template
-
-For each place-level region task, document the harm scan as follows:
-
-```
-## Harm Scan — [Region name] — [Module name]
-
-**Question 1: Could this explainer stigmatize a neighborhood or community?**
-- Answer: [Yes / No / Uncertain]
-- Mitigation: [If yes/uncertain, describe how framing mitigates harm]
-- Signed off by: [Reviewer name]
-
-**Question 2: Could this explainer read as redlining-adjacent?**
-- Answer: [Yes / No / Uncertain]
-- Mitigation: [If yes/uncertain, describe how framing mitigates harm]
-- Signed off by: [Reviewer name]
-
-**Question 3: Could this explainer enable targeting or profiling?**
-- Answer: [Yes / No / Uncertain]
-- Mitigation: [If yes/uncertain, describe aggregate-only + geo-precision measures]
-- Signed off by: [Reviewer name]
-
-**Question 4: Could this explainer be mistaken for a recommendation/ranking/advice?**
-- Answer: [Yes / No / Uncertain]
-- Mitigation: [If yes/uncertain, describe "not advice" framing and interface design]
-- Signed off by: [Reviewer name]
-
-**Overall:** [PASS / FLAG / ESCALATE]
-- If PASS: region is approved for selection.
-- If FLAG: mitigations are required before approval.
-- If ESCALATE: domain reviewer or steward consultation required; region selection deferred.
-```
 
 ---
 
