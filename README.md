@@ -8,10 +8,11 @@ Vast amounts of public, openly-licensed data exist — transit timetables, road-
 
 This is a **Hee-Lee Oss** good-deed project. Contributors pull a task, do it with their own coding agent, and open a PR. Get started: https://github.com/Hee-Lee-Oss-Projects/hee-lee-oss-downloads
 
-## Plan
+## Getting started
 - [PLAN.md](./PLAN.md) — robust enterprise plan (vision, architecture, roadmap, risks; includes an applied-improvements appendix + review sign-off)
 - [TASKS.md](./TASKS.md) — schema-mapped task backlog
 - [tasks/](./tasks/) — ready-to-pull task JSON(s)
+- [CORRECTIONS.md](./CORRECTIONS.md) — public corrections process & per-explainer changelog convention
 
 ## Contribute
 ```bash
