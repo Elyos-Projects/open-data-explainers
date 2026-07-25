@@ -6,7 +6,7 @@ Vast amounts of public, openly-licensed data exist — transit timetables, road-
 
 **Definition of shipped:** Explainers/tools adopted by a partner/community, accurate and source-cited.
 
-This is a **Hee-Lee Oss** good-deed project. Contributors pull a task, do it with their own coding agent, and open a PR. Get started: https://github.com/Hee-Lee-Oss-Projects/hee-lee-oss-downloads
+This is a **Hee-Lee Oss** good-deed project. Contributors pull a task, do it with their own coding agent, and open a PR. Get started: https://github.com/HeeLeeOss/hee-lee-oss-downloads
 
 ## Getting started
 - [CONTRIBUTING.md](./CONTRIBUTING.md) — how to report errors, suggest improvements, and contribute work
@@ -18,7 +18,7 @@ This is a **Hee-Lee Oss** good-deed project. Contributors pull a task, do it wit
 ## Contribute
 ```bash
 hee-lee-oss browse
-hee-lee-oss next --repo Hee-Lee-Oss-Projects/open-data-explainers --no-fork
+hee-lee-oss next --repo HeeLeeOss/open-data-explainers --no-fork
 ```
 
 ### Found an error?
